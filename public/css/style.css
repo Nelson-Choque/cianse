@@ -128,7 +128,7 @@ button{
 .box-nosotros>p{
 
     font-family: 'Caviar-Dreams',sans-serif;
-    text-align: justify;
+    text-align: start;
     margin-bottom: 6%;
     margin-right: 5%;
 }
@@ -676,9 +676,8 @@ button{
 
 .box-instalaciones>div>section>p{
     font-family: 'Caviar-Dreams',sans-serif;
-    text-align: justify;
     margin-right: 2%;
-    text-align: justify;
+    text-align: start;
 }
 
 .box-instalaciones>div>section>div{
