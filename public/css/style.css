@@ -1465,13 +1465,13 @@ h1{
 
 .title{
     color: #0C154A;
-    font-size: 1.5rem ;
+    font-size: 1.5rem !important;
 }
 
 @media(min-width:768px) {
     .title{
 
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
 
     
