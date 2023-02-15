@@ -15,6 +15,13 @@ export function getStaticPaths() {
         { params: { id: "6" } },
         { params: { id: "7" } },
         { params: { id: "8" } },
+        { params: { id: "9" } },
+        { params: { id: "10" } },
+        { params: { id: "11" } },
+        { params: { id: "12" } },
+        { params: { id: "13" } },
+        { params: { id: "14" } },
+        { params: { id: "15" } },
     ];
 }
 
@@ -61,6 +68,7 @@ let service = servicios.find((service) => service.id === idParams);
 
     .producto_images_img {
         width: 100%;
+        object-fit: cover;
     }
     .producto_descripcion {
         grid-area: descripcion;
@@ -131,14 +139,55 @@ let service = servicios.find((service) => service.id === idParams);
 
         .producto_descripcion_title{
         }
+        .producto_images_img {
+            width: 100%;
+        height: 500px;
+        }
     }
+
+    .swiper{
+    width: 100%;
+    }
+
+
+
 </style>
 
 <MySiteLayout>
     <Header />
 
     <section class="producto">
-        <div class="producto_images">
+
+        <div class="swiper producto_images">
+            <div class="swiper-wrapper">
+        
+                {(service.imagenes)?
+                    service.imagenes.map((e) => (
+                        <>
+                            <img class="swiper-slide producto_images_img" src={"/img/" + e} />
+                        </>
+                    )):"Error en la imagen"
+                }
+        
+              <!-- <Servicio id="1" img="/img/termoencogibles.png" title="TERMOENCOGIBLE Y TERMOCONTRAIBLE" />
+              <Servicio id="2" img="/img/termoencogibles.png" title="TERMOENCOGIBLE Y TERMOCONTRAIBLE" />
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+        
+              <div class="swiper-slide">Slide 3</div> -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+
+        <!-- <div class="producto_images">
             {(service.imagenes)?
                 service.imagenes.map((e) => (
                     <>
@@ -146,20 +195,20 @@ let service = servicios.find((service) => service.id === idParams);
                     </>
                 )):"Error en la imagen"
             }
-        </div>
+        </div> -->
 
         <div class="producto_descripcion">
             <h2 class="producto_descripcion_title">{service.nombre}</h2>
-            <p class="producto_descripcion_text">{service.descripcion}</p>
+            <p class="producto_descripcion_text font-text">{service.descripcion}</p>
             <button class="producto_descripcion_button">Enviar mensaje</button>
         </div>
 
         <div class="producto_caracteristicas">
-            <h3 class="producto_caracteristicas_title">
+            <h3 class="producto_caracteristicas_title ">
                 descripcion del producto
             </h3>
             <hr>
-            <ul class="producto_caracteristicas_items">
+            <ul class="producto_caracteristicas_items font-text">
                 {
                     (service.caracteristicas)?
                         service.caracteristicas.map((e) => (
@@ -173,3 +222,46 @@ let service = servicios.find((service) => service.id === idParams);
         </div>
     </section>
 </MySiteLayout>
+
+
+<script type="module">
+
+    const swiper = new Swiper(".producto_images", {
+
+      // Optional parameters
+      direction: "horizontal",
+      loop: false,
+  
+    //   breakpoints:{
+  
+    //     768:{
+    //       slidesPerView: 2,
+    //       spaceBetween: 20
+  
+    //     },
+    //     1200:{
+    //       slidesPerView: 3,
+    //       spaceBetween: 20
+  
+    //     }
+    //   },
+  
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+  
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      // And if we need scrollbar
+  
+    });
+
+    console.log(swiper);
+
+  </script>

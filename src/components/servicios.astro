@@ -56,17 +56,19 @@ const {servicios} = dataServicios;
   const swiper = new Swiper(".swiper", {
     // Optional parameters
     direction: "horizontal",
-    loop: true,
+    loop: false,
 
     breakpoints:{
 
       768:{
         slidesPerView: 2,
+        slidesPerGroup:2,
         spaceBetween: 20
 
       },
       1200:{
         slidesPerView: 3,
+        slidesPerGroup:3,
         spaceBetween: 20
 
       }
@@ -75,6 +77,7 @@ const {servicios} = dataServicios;
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
+      clickable:true,
     },
 
     // Navigation arrows
