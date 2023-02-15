@@ -165,7 +165,7 @@ button{
 
 .card-nosotros>div>p{
     font-family: 'Caviar-Dreams',sans-serif;
-    text-align: justify;
+    text-align: start;
     font-size: 15px;
 }
 
@@ -504,7 +504,7 @@ button{
 
 .box-equipo>div>section>div>div>p{
     font-family: 'Caviar-Dreams',sans-serif;
-    text-align: justify;
+    text-align: start;
     padding-right: 8%;
 }
 
@@ -1328,7 +1328,7 @@ h1{
     }
 
     .box-equipo>div>section>p{
-        text-align: center;
+        text-align: start;
     }
 
     /*.card-servicios{
