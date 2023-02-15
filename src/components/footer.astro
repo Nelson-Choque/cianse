@@ -1,0 +1,226 @@
+<style>
+  .container{
+    max-width: 1400px;
+    margin: auto;
+
+  }
+  .footer {
+    background-color: #eee;
+  }
+
+
+  .footer_logo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem 0  0 1rem;
+  }
+  .footer_logo_img{
+    width: 52px;
+  }
+
+  .footer_logo_text{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    padding-left: .25rem;
+  }
+
+  .footer_title{
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .footer-section {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "menu"
+      "contact"
+      "direction";
+
+    padding: 1rem;
+  }
+
+  @media (min-width: 576px) {
+    .footer-section {
+      grid-template-areas:
+        "menu contact"
+        "direction direction";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .footer-section {
+      grid-template-areas: "menu contact direction";
+    }
+  }
+  .footer_section_menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_menu_title {
+    margin: 0;
+  }
+  .footer_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer_menu_item {
+  }
+
+  .footer_menu_item_link {
+    display: inline-block;
+
+    text-decoration: none;
+    color: #000;
+    padding-top: 1rem;
+  }
+
+  .footer_contacto {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_direction {
+    grid-area: direction;
+  }
+
+ 
+  .footer_copyright {
+    text-align: center;
+  }
+</style>
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="footer_logo">
+      <img class="footer_logo_img" src="/img/logocianse.png" alt="">
+      <p class="footer_logo_text">cianse</p>
+    </div> -->
+    <section class="footer-section">
+      <section class="footer_section_menu">
+        <h3 class="title footer_title">Menú</h3>
+        <ul class="footer_menu">
+          <li class="footer_menu_item">
+            <a class="footer_menu_item_link" href="/#nosotros">Nosotros</a>
+          </li>
+          <li class="footer_menu_item">
+            <a class="footer_menu_item_link" href="/#servicios"
+              >Nuestros Servicios</a
+            >
+          </li>
+          <li class="footer_menu_item">
+            <a class="footer_menu_item_link" href="/#instalaciones"
+              >Nuestras Instalaciones</a
+            >
+          </li>
+          <li class="footer_menu_item">
+            <a class="footer_menu_item_link" href="/#equipo">Nuestro Equipo</a>
+          </li>
+          <li class="footer_menu_item">
+            <a class="footer_menu_item_link" href="/#contacto">Contacto</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer_contacto">
+        <h3 class="title footer_title">Central de Atención</h3>
+        <div class="footer_contacto_schedule">
+          <p class="footer_contacto_schedule_days">
+            <strong>Atendemos:</strong> De Lunes a Sábado
+          </p>
+          <p class="footer_contacto_schedule_hour">
+            <strong>Horario:</strong> 8:00 a.m. - 6:00 p.m.
+          </p>
+          <p class="footer_contacto_schedule_phone">
+            <strong>Telefono:</strong> +51 995713485
+          </p>
+          <p class="footer_contacto_schedule_email">
+            <strong>Email:</strong> marcos.gutierrez@cianse.com
+          </p>
+        </div>
+      </section>
+
+      <section class="footer_direction">
+        <h3 class="title footer_title">Dirección</h3>
+        <div class="footer_direction_item">
+          <p class="location">
+            Cal. El Amauta Mza. Q Lote 9 Urb. San Juan Bautista de Villa,
+            Chorrillos
+          </p>
+          <iframe
+            class="footer_direction_item_map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.9135617971845!2d-77.00881984873214!3d-12.195571815884358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9dfc05ad5e5%3A0xd98f82d0e40f34af!2sCianse%20SAC!5e0!3m2!1ses-419!2spe!4v1676361125453!5m2!1ses-419!2spe"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="footer_direction_item">
+          <p class="location">
+            Cal. El Amauta Mza. Q Lote 9 Urb. San Juan Bautista de Villa,
+            Chorrillos
+          </p>
+          <iframe
+            class="footer_direction_item_map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.9135617971845!2d-77.00881984873214!3d-12.195571815884358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9dfc05ad5e5%3A0xd98f82d0e40f34af!2sCianse%20SAC!5e0!3m2!1ses-419!2spe!4v1676361125453!5m2!1ses-419!2spe"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <hr />
+  <p class="footer_copyright">
+    <strong>CIANSE</strong> | Todos los derechos reservados - 2023
+  </p>
+
+  <!-- 
+<div class="contacto_information">
+
+    <section class="contacto_information_social-media">
+      <h3>Central de Atención</h3>
+      <p>
+        De Lunes a Sábado<br />
+        8:00 a.m. - 6:00 p.m.<br /><br />
+        <span class="fono">+51 995713485</span><br />
+
+        <span class="mail">marcos.gutierrez@cianse.com</span><br /><br />
+      </p>
+    </section>
+    <section class="contacto_information_location">
+      <h3>Dirección</h3>
+      <p>
+        <span class="location ">
+          Cal. El Amauta Mza. Q Lote 9 Urb. San Juan Bautista de Villa,
+          Chorrillos
+
+        </span>
+        <iframe class="contacto_information_location_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.9135617971845!2d-77.00881984873214!3d-12.195571815884358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9dfc05ad5e5%3A0xd98f82d0e40f34af!2sCianse%20SAC!5e0!3m2!1ses-419!2spe!4v1676361125453!5m2!1ses-419!2spe" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+      <p>
+        <span class="location">
+          Cal. 3 Mza. M Lote 6 - Km 20000 Las Vertientes, Villa el Salvador
+        </span>
+        <iframe class="contacto_information_location_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.9135617971845!2d-77.00881984873214!3d-12.195571815884358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9dfc05ad5e5%3A0xd98f82d0e40f34af!2sCianse%20SAC!5e0!3m2!1ses-419!2spe!4v1676361125453!5m2!1ses-419!2spe" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+    </section> -->
+</footer>

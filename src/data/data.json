@@ -1,0 +1,93 @@
+{
+
+
+    "servicios":[
+
+        {
+            "id": 1,
+            "nombre":"Trabajos refrigerados",
+            "descripcion":"Contamos con ambientes que se mantienen bajo temperaturas reguladas, que permiten la manipulación de productos perecibles y/o sensibles a altas temperaturas. Esta área frigorífica asegura la conservación de las óptimas condiciones y calidad de sus productos. ",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Control de temperatura y humedad para mantener la calidad del producto.","Inhibir la proliferación de microorganismos patógenos peligrosos para la salud."]
+
+        },
+
+        {
+            "id": 2,
+            "nombre":"Acondicionado y reacondicionado",
+            "descripcion":"Realizamos el acondicionamiento de sus productos en todo tipo de empaques o exhibidores promocionales.  Asimismo, reacondicionamos sus productos para optimizar la  presentación de sus empaques con la finalidad de generar un mayor impacto y reforzar la intención de compra en el punto de venta.",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Generar nuevas experiencias de compra.","Facilita el acercamiento del consumidor.","Mejora la visibilidad del producto."]
+        },
+        
+
+        {
+            "id": 3,
+            "nombre":"Diseño y fabricación de exhibidores promocionales",
+            "descripcion":"Desarrollamos exhibidores promocionales en cartón corrugado y micro corrugado que potencian el aspecto visual de sus productos y refuerzan la decisión de compra de su cliente. Contamos además con un equipo altamente especializado en diseño y CAD, herramientas que les permiten desarrollar prototipos de alto impacto frente a los productos o promociones de la competencia de su marca.",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Diseñado bajo los conceptos de los autoservicios, retail y consideraciones de góndolas donde se exhibirán sus productos.","Empaques amigables con el medio ambiente.","Diferenciación frente a la competencia."]
+        },
+
+        {
+            "id": 4,
+            "nombre":"Encintado y/o emplayado",
+            "descripcion":"Realizamos encintados de cajas bajo altos estándares de calidad, para la protección de sus productos durante el proceso de almacenaje o transporte.  Asimismo, emplayamos; en películas de plástico, las cajas trabajadas según la necesidad de distribución y logística que su empresa requiera.",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Protección de los empaques promocionales","Facilidad de transporte y distribución"]
+        },
+
+        {
+            "id": 5,
+            "nombre":"Almacenaje",
+            "descripcion":"Contamos con instalaciones  adecuadas  para  almacenar su mercadería, asegurando su custodia segura y correcta manipulación y control mediante el uso de sistemas de seguridad, maquinaria y equipos.",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Amplia capacidad de almacenaje.","Mercadería asegurada mediante pólizas de seguro."]
+        },
+
+        {
+            "id": 6,
+            "nombre":"Diseño y desarrollo de caja master",
+            "descripcion":"Diseñamos y desarrollamos cajas máster de cartón corrugado y microcorrugado a full color o fotocromía con impresión Offset. Estas cajas son comúnmente utilizadas para el correcto agrupamiento de unidades, embalaje y protección de productos como: alimentos, golosinas, bebidas, artefactos eléctricos, productos cosméticos, entre otros.",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Fabricación de acuerdo a sus medidas y/o ficha técnica.","Impresión Offset a full color.","Protección de productos durante los procesos logísticos."]
+        },
+
+        {
+            "id": 7,
+            "nombre":"Impresión de etiquetas adhesivas",
+            "descripcion":"Realizamos el diseño e impresión de etiquetas adhesivas de papel con códigos de barra, QR, lotes, fechas de vencimiento y octógonos que permitan que sus productos cumplan con las normas que regulan la información que deben de contener los productos manufacturados que sean comercializados en el territorio nacional.",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Cumplimiento de normas técnicas.","Cumplimiento de estándares de calidad.","Claridad y legibilidad para la identificación de sus productos."]
+        },
+
+        {
+            "id": 8,
+            "nombre":"Empaque blíster",
+            "descripcion":"Ofrecemos empaques de calidad, que permiten exhibir su producto para que el consumidor conozca la presentación y características visuales y físicas, generando una mayor confianza en su decisión de compra. Adicionalmente, el empaque blister, muestra mayor protección del producto y facilita la decisión de elegirlo. ",
+
+            "imagenes":["termoencogibles.png"],
+            
+            "caracteristicas":["Fabricación de acuerdo a sus medidas y/o ficha técnica.","Impresión Offset a full color.","Protección de productos durante los procesos logísticos."]
+        }
+        
+
+
+
+    ]
+
+}

@@ -1,0 +1,29 @@
+<section class="header-banner">
+    <nav>
+        <img src="/img/logo.png" />
+        <img src="/img/menu-burguer.png" class="menu-mobile"/>
+        <ul>
+            <li><a href="/#nosotros">NOSOTROS</a></li>
+            <li><a href="/#servicios">SERVICIOS</a></li>
+            <li><a href="/#equipo">EQUIPO</a></li>
+            <li><a href="/#contacto">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <div class="portada" >
+        <h2>ESPECIALISTAS EN MAQUILA
+             DE EMPAQUES
+        </h2>
+        <p>
+            Más de 17 años permitiendo que nuestros clientes se enfoquen en lo genera más valor
+            para su negocio, nosotros nos encargamos de lo demás.
+        </p>
+        <button onclick="moveContacto();">¡CONTÁCTANOS!</button>
+    </div>
+
+    <script is:inline>
+        $(".menu-mobile").click(function(){
+            $(".header-banner>nav>ul").toggle();
+        });
+    </script>
+
+</section>

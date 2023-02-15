@@ -1,15 +1,591 @@
 ---
+
+import MySiteLayout from "./../layouts/MySiteLayout.astro";
+import Header from "../components/header.astro";
+import Nosotros from "../components/nosotros.astro";
+import Servicios from "../components/servicios.astro";
+import Instalaciones from "../components/instalaciones.astro";
+import Equipo from "../components/equipo.astro";
+import Clientes from "../components/clientes.astro";
+import Contacto from "../components/contacto.astro";
+
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+
+	<MySiteLayout>
+		
+
+		<Header />
+
+		<Nosotros />
+		
+		<Servicios />
+
+		<Instalaciones/>
+		
+		<Equipo />
+		<Clientes />
+		<Contacto />
+
+		<script is:inline>
+			var intervalImg;
+	
+			function showNroImgSlide(posA,posB){
+				$(".card-servicios>div:nth-child("+posA+")>img:nth-child("+posB+")").attr("style","opacity:1;");
+				/*for (var i = 1; i <= 4; ++i) {
+					if(i==posB){
+						$(".card-servicios>div:nth-child("+posA+")>img:nth-child("+posB+")").attr("style","opacity:1;");
+						console.log(".card-servicios>div:nth-child("+posA+")>img:nth-child("+posB+")");
+						console.log(posA+" "+i+" "+posB);
+						continue;
+					}else{
+						console.log("no");
+						console.log(posA+" "+i+" "+posB);
+						$(".card-servicios>div:nth-child("+posA+")>img:nth-child("+posB+")").attr("style","opacity:0;");
+					}     
+				}*/
+				
+			}
+	
+			function changeImgSlide(pos){
+				let posImg=1;
+				intervalImg=setInterval(function(){
+					if(posImg==4){
+						$(".card-servicios>div:nth-child("+pos+")>img:nth-child("+posImg+")").attr("style","opacity:0;");
+						posImg=1;
+						$(".card-servicios>div:nth-child("+pos+")>img:nth-child("+posImg+")").attr("style","opacity:1;");
+					}else{
+						$(".card-servicios>div:nth-child("+pos+")>img:nth-child("+posImg+")").attr("style","opacity:0;");
+						++posImg;
+						$(".card-servicios>div:nth-child("+pos+")>img:nth-child("+posImg+")").attr("style","opacity:1;");
+					}            
+				},4000);
+			} 
+			
+			function resetImgSlide(pos){
+				clearInterval(intervalImg);
+				setTimeout(function(){
+					$(".card-servicios>div:nth-child("+pos+")>img:nth-child(1)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child("+pos+")>img:nth-child(2)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child("+pos+")>img:nth-child(3)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child("+pos+")>img:nth-child(4)").attr("style","opacity:0;");
+				},4000)
+				
+			}
+		</script>
+
+
+		
+		<script is:inline>
+			baseSlideB=window.innerWidth;
+			positionB=1;
+	
+			function nextServiceB(){
+				if(positionB==7){ return false}
+	
+				let movePos=baseSlideB*positionB;
+				$(".slider-2").attr("style","transform:translatex(-"+movePos+"px);");
+				++positionB; 
+			}
+	
+			function prevServiceB(){
+				if(positionB==1){ return false}
+				--positionB;
+				let movePos=(baseSlideB*positionB)-baseSlideB;
+				console.log(movePos);
+				$(".slider-2").attr("style","transform:translatex(-"+movePos+"px);");
+				 
+			}
+	
+			setInterval(function(){
+				nextServiceB();
+				if(positionB==7){
+					positionB=1;
+				}
+			},4000);// Acá puedes modificar el tiempo del slider automatico / 4000 = 4 segundos
+	
+	
+	
+			function cambiarImg(sede,nroImg){
+				let tot=0;
+				if(sede=="villa"){
+					tot=6;
+				}else{
+					tot=5;
+					flag=0;
+				}
+	
+				for (let i = 1; i <=tot; ++i) {
+					if(sede=="villa"){
+						if(nroImg==i){
+							$(".box-instalaciones>div>section:nth-child(2)>img:nth-child("+nroImg+")").attr("style","opacity:1;");
+						}else{
+							$(".box-instalaciones>div>section:nth-child(2)>img:nth-child("+i+")").attr("style","opacity:0;");
+						}
+					}else{
+	
+						if(nroImg==i){
+							$(".box-instalaciones>div>section:nth-child(1)>img:nth-child("+(i+4)+")").attr("style","opacity:1;");
+						}else{
+							$(".box-instalaciones>div>section:nth-child(1)>img:nth-child("+(i+4)+")").attr("style","opacity:0;");
+						}
+					}
+	
+	
+				}
+			}
+	
+			let ini_service=4;
+			let base_slide=450;
+			let base_slide_=450;
+	
+			if(window.innerWidth<=1920){
+				base_slide=514;
+				base_slide_=514;
+			}
+	
+			if(window.innerWidth<=1680){
+				base_slide=450;
+				base_slide_=450;
+			}
+	
+			if(window.innerWidth<=1440){
+				base_slide=404;
+				base_slide_=404;
+			}
+	
+			if(window.innerWidth<=1366){
+				base_slide=382;
+				base_slide_=382;
+			}
+	
+			if(window.innerWidth<=1280){
+				base_slide=356;
+				base_slide_=356;
+			}
+	
+			if(window.innerWidth<=600){
+				/*base_slide=335;
+				base_slide_=335;*/
+				base_slide=window.innerWidth-40+2;
+				base_slide_=window.innerWidth-40+2;
+			}
+	
+			let flag_slide=0
+			let ini_slide=setInterval(function(){
+				++flag_slide;
+				nextService();
+				if(flag_slide==2){
+					clearInterval(ini_slide);
+				}
+			},200);
+	
+			let pos_ini_slide=4;
+			function verServicioSlide(posicion){
+	
+	
+				let dif_=0;
+				let base=0;
+	
+				if(posicion>pos_ini_slide){
+					dif_=posicion-pos_ini_slide;
+					base=base_slide+(base_slide_*dif_);
+	
+				}
+	
+				if(posicion<pos_ini_slide){
+					dif_=pos_ini_slide-posicion;
+					base=base_slide-(base_slide_*dif_);
+	
+				}
+	
+				if(posicion==1){
+					base=base_slide_;
+				}
+	
+				if(posicion==2){
+					base=0;
+				}
+	
+				if(posicion==3){
+					base=base_slide_;
+				}
+	
+				if(posicion==4){
+					base=base_slide_*2;
+				}
+	
+				if(posicion==5){
+					base=base_slide_*3;
+				}
+	
+				if(posicion==6){
+					base=base_slide_*4;
+				}
+	
+				if(posicion==7){
+					base=base_slide_*5;
+				}
+	
+				if(window.innerWidth<=600){
+					base=base+base_slide_;
+				}
+	
+	
+				console.log(base);
+	
+				//nextService(posicion);
+				let tot=$(".card-servicios>div").length;
+				for(var i=1;i<=tot;++i){
+					$(".card-servicios>div:nth-child("+i+")").attr("style","opacity:0;");
+					if(i==posicion){
+	
+						base_slide=base;
+						if(window.innerWidth<=600){
+							base_slide=base_slide_-base_slide_;
+						}
+	
+						if(posicion==1){
+							console.log("posicion 1");
+							$(".card-servicios").attr("style"," transform: translateX("+base_slide+"px);");
+							//$(".card-servicios>div:nth-child("+(i-1)+")").attr("style","opacity:1;");
+							$(".card-servicios>div:nth-child("+i+")").attr("style","opacity:1;");
+							$(".card-servicios>div:nth-child("+(i+1)+")").attr("style","opacity:1;");
+							$(".card-servicios>div:nth-child("+(i+2)+")").attr("style","opacity:0;");
+							console.log("pos 1");
+						}else{
+							$(".card-servicios").attr("style"," transform: translateX(-"+base+"px);");
+							$(".card-servicios>div:nth-child("+(i-1)+")").attr("style","opacity:1;");
+							$(".card-servicios>div:nth-child("+i+")").attr("style","opacity:1;");
+							$(".card-servicios>div:nth-child("+(i+1)+")").attr("style","opacity:1;");
+							$(".card-servicios>div:nth-child("+(i+2)+")").attr("style","opacity:0;");
+							$(".card-servicios>div:nth-child("+(i+3)+")").attr("style","opacity:0;");
+							$(".card-servicios>div:nth-child("+(i+4)+")").attr("style","opacity:0;");
+							$(".card-servicios>div:nth-child("+(i+5)+")").attr("style","opacity:0;");
+							$(".card-servicios>div:nth-child("+(i+6)+")").attr("style","opacity:0;");
+							console.log("pos 2");
+						}
+	
+	
+	
+						break;
+					}
+				}
+	
+				pos_ini_slide=posicion;
+				ini_service=posicion;
+	
+				if(posicion==4){
+					ini_service=6;
+				}
+	
+				if(posicion==5){
+					ini_service=7;
+				}
+	
+				if(posicion==6){
+					ini_service=8;
+				}
+	
+				if(posicion==7){
+					ini_service=8;
+				}
+	
+	
+	
+			}
+	
+			function nextService(position=0){
+	
+				if(ini_service==1){
+					$(".card-servicios").attr("style"," transform: translateX(0px);");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					ini_service=4;
+	
+					pos_ini_slide=4;
+					base_slide=base_slide_;
+					return false;
+				}
+	
+				if(ini_service==2){
+					base_slide=base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:0;");
+					ini_service=5;
+					return false;
+				}
+	
+				if(ini_service==3){
+					base_slide=base_slide_*2;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(6)").attr("style","opacity:0;");
+	
+					ini_service=6;
+					return false;
+				}
+	
+	
+				if(ini_service==4){
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+	
+					++ini_service;
+					return false;
+				}
+	
+				if(ini_service==5){
+					base_slide=base_slide+base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+					++ini_service;
+					return false;
+				}
+	
+				if(ini_service==6){
+					base_slide=base_slide+base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(6)").attr("style","opacity:1;");
+					++ini_service;
+					return false;
+				}
+	
+				if(ini_service==7){
+					base_slide=base_slide+base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(7)").attr("style","opacity:1;");
+					++ini_service;
+					return false;
+				}
+	
+	
+	
+				if(window.innerWidth<=600){
+					if(ini_service==8){
+						base_slide=base_slide+base_slide_;
+						$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:0;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:1;");
+						++ini_service;
+						return false;
+					}
+	
+					if(ini_service==9){
+						base_slide=base_slide+base_slide_;
+						$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:0;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:1;");
+						++ini_service;
+						return false;
+					}
+				}
+			}
+	
+			function prevService(){
+	
+				if(window.innerWidth<=600){
+					if(ini_service==10){
+						base_slide=base_slide-base_slide_;
+						$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:1;");
+						--ini_service;
+						return false;
+					}
+	
+					if(ini_service==9){
+						base_slide=base_slide-base_slide_;
+						$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:1;");
+						--ini_service;
+						return false;
+					}
+				}
+	
+				if(ini_service==8){
+					base_slide=base_slide-base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					if(pos_ini_slide==7){
+						$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:1;");
+					}else{
+						$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:0;");
+					}
+	
+					--ini_service;
+					return false;
+				}
+	
+				if(ini_service==7){
+					base_slide=base_slide-base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					if(pos_ini_slide==5){
+						$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:0;");
+					}else{
+						$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(7)").attr("style","opacity:0;");
+					}
+	
+					--ini_service;
+					return false;
+				}
+	
+				if(ini_service==6){
+					base_slide=base_slide-base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					if(pos_ini_slide==4){
+						$(".card-servicios>div:nth-child(2)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:0;");
+					}else{
+						$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(4)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(5)").attr("style","opacity:1;");
+						$(".card-servicios>div:nth-child(6)").attr("style","opacity:0;");
+					}
+	
+					--ini_service;
+					return false;
+				}
+	
+				if(ini_service==5){
+					base_slide=base_slide-base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					--ini_service;
+					base_slide=base_slide_;
+					return false;
+				}
+	
+				/*if(ini_service==1){
+					$(".card-servicios").attr("style"," transform: translateX(0px);");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					ini_service=4;
+	
+					pos_ini_slide=4;
+					base_slide=base_slide_;
+					return false;
+				}*/
+	
+				if(ini_service==2){
+	
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:0;");
+					ini_service=5;
+					return false;
+				}
+	
+				if(ini_service==3){
+					base_slide=base_slide_-base_slide_;
+					$(".card-servicios").attr("style"," transform: translateX(-"+base_slide+"px);");
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(6)").attr("style","opacity:0;");
+	
+					ini_service=6;
+					return false;
+				}
+	
+				if(ini_service==4){
+	
+					$(".card-servicios").attr("style"," transform: translateX(0px);");
+					$(".card-servicios>div:nth-child(1)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(2)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(3)").attr("style","opacity:1;");
+					$(".card-servicios>div:nth-child(4)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(5)").attr("style","opacity:0;");
+					$(".card-servicios>div:nth-child(6)").attr("style","opacity:0;");
+	
+					return false;
+				}
+			}
+	
+			function validarForm(){
+				enviarMensaje();
+				return false;
+			}
+	
+			function enviarMensaje(){
+				let datos=$( "form[name='formContacto']" ).serialize();
+				$.ajax({
+					method: "POST",
+					url: "send_email.php",
+					data: datos
+				})
+					.done(function( respuesta ) {
+						if(respuesta=="0"){
+							alert("No se pudo enviar el mensaje");
+						}else{
+							alert("Datos enviados!");
+						}
+					});
+			}
+	
+			function moveContacto(){
+				$("a[href='#contacto']").click();
+			}
+	
+			// $(function(){
+			//     $('a[href*=#]').click(function() {
+			//         let ancho=$( window ).width();
+			//         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+			//             && location.hostname == this.hostname) {
+			//                 var $target = $(this.hash);
+			//                 $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+			//                 if ($target.length) {
+			//                     var targetOffset = $target.offset().top;
+			//                     if(ancho<=880){
+			//                         $('html,body').animate({scrollTop: targetOffset}, 1000);
+			//                     }else{
+			//                         $('html,body').animate({scrollTop: targetOffset}, 1000);
+			//                     }
+	
+			//                     return false;
+			//                 }
+			//         }
+	
+			//     });
+			// });
+		</script>
+
+	</MySiteLayout>

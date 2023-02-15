@@ -1,0 +1,89 @@
+---
+import Servicio from "./servicio.astro";
+import dataServicios from "./../data/data.json";
+
+const {servicios} = dataServicios;
+
+
+---
+
+<style is:global>
+  .swiper {
+    width: 100%;
+    height: 600px;
+  }
+
+
+</style>
+
+<section id="servicios" class="box-servicios">
+  <h2 class="title">SERVICIOS</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      {
+        (servicios)?
+        servicios.map((e)=>(
+          <>
+              <Servicio id={e.id} img={"/img/"+e.imagenes?.at(0)} title={e.nombre} />
+          </>
+        )):"error al cargar los servicios"
+
+      }
+
+      <!-- <Servicio id="1" img="/img/termoencogibles.png" title="TERMOENCOGIBLE Y TERMOCONTRAIBLE" />
+      <Servicio id="2" img="/img/termoencogibles.png" title="TERMOENCOGIBLE Y TERMOCONTRAIBLE" />
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+
+      <div class="swiper-slide">Slide 3</div> -->
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+
+</section>
+
+<script type="module">
+
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+
+    breakpoints:{
+
+      768:{
+        slidesPerView: 2,
+        spaceBetween: 20
+
+      },
+      1200:{
+        slidesPerView: 3,
+        spaceBetween: 20
+
+      }
+    },
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar
+
+  });
+</script>

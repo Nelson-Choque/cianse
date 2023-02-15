@@ -11,5 +11,8 @@
 	},
 	"dependencies": {
 		"astro": "^2.0.10"
+	},
+	"devDependencies": {
+		"jquery": "^3.6.3"
 	}
 }

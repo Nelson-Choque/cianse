@@ -1,0 +1,175 @@
+---
+import Header from "../../components/header.astro";
+
+import MySiteLayout from "../../layouts/MySiteLayout.astro";
+
+import {servicios} from "./../../data/data.json";
+
+export function getStaticPaths() {
+    return [
+        { params: { id: "1" } },
+        { params: { id: "2" } },
+        { params: { id: "3" } },
+        { params: { id: "4" } },
+        { params: { id: "5" } },
+        { params: { id: "6" } },
+        { params: { id: "7" } },
+        { params: { id: "8" } },
+    ];
+}
+
+let { id } = Astro.params;
+
+let idParams = parseInt(id);
+
+let service = servicios.find((service) => service.id === idParams);
+
+---
+
+<style is:global>
+    body {
+        background-color: #f5f5f5;
+    }
+    .header-banner {
+        background: #2c148b;
+    }
+    .portada {
+        display: none;
+    }
+
+    .producto {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        min-height:100vh ;
+        margin: 0 auto 2rem auto;
+        padding: 1rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        gap: 1rem;
+
+        grid-template-areas:
+                "img"
+                "descripcion"
+                "caracteristicas";
+        }
+    }
+
+    .producto_images {
+        grid-area: img;
+    }
+
+    .producto_images_img {
+        width: 100%;
+    }
+    .producto_descripcion {
+        grid-area: descripcion;
+    }
+    .producto_descripcion_title {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #2c148b;
+
+    }
+    .producto_descripcion_text{
+        line-height: 30px;
+    }
+
+    .producto_descripcion_button{
+        padding: 1rem 1.5rem;
+        background-color: #2c148b;
+        color: #fff;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .producto_caracteristicas {
+        /* border: 1px solid #000000aa; */
+        grid-area: caracteristicas;
+        margin-top: 1rem;
+    }
+
+    .producto_caracteristicas_title {
+        /* background-color: #2c148b; */
+        font-size: 1rem;
+        margin: 0;
+        /* padding: 1rem; */
+        color: #000;
+        text-transform: capitalize;
+
+    }
+    .producto_caracteristicas_items{
+        padding: 0;
+        padding-left: 1rem;
+    }
+    .producto_caracteristicas_items_item {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+    @media (min-width: 768px) {
+        .producto {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: max-content max-content;
+            grid-template-areas:
+                "img descripcion"
+                "caracteristicas caracteristicas";
+        }
+        .producto_descripcion_title{
+            font-size: 2rem;
+        }
+        .producto_caracteristicas_title{
+            font-size: 1.5rem;
+        }
+    }
+    @media (min-width: 1200px) {
+        .producto {
+            max-width: 1400px;
+        }
+
+        .producto_descripcion_title{
+        }
+    }
+</style>
+
+<MySiteLayout>
+    <Header />
+
+    <section class="producto">
+        <div class="producto_images">
+            {(service.imagenes)?
+                service.imagenes.map((e) => (
+                    <>
+                        <img class="producto_images_img" src={"/img/" + e} />
+                    </>
+                )):"Error en la imagen"
+            }
+        </div>
+
+        <div class="producto_descripcion">
+            <h2 class="producto_descripcion_title">{service.nombre}</h2>
+            <p class="producto_descripcion_text">{service.descripcion}</p>
+            <button class="producto_descripcion_button">Enviar mensaje</button>
+        </div>
+
+        <div class="producto_caracteristicas">
+            <h3 class="producto_caracteristicas_title">
+                descripcion del producto
+            </h3>
+            <hr>
+            <ul class="producto_caracteristicas_items">
+                {
+                    (service.caracteristicas)?
+                        service.caracteristicas.map((e) => (
+                            <li class="producto_caracteristicas_items_item">
+                                {e}
+                                </li>
+                                )):"error"
+
+                }
+            </ul>
+        </div>
+    </section>
+</MySiteLayout>
