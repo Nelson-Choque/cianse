@@ -9,9 +9,12 @@
 <style>
 
     .card_servicios{
-        background-color: #fff;
         border-radius: 1rem;
         overflow: hidden;
+        box-sizing: content-box;
+        /* box-sizing: border-box; */
+
+
     }
     .card_servicios_img{
         width: 100%;
@@ -20,9 +23,17 @@
     }
 
     .card_servicios_information{
-        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 26%;
+        padding-bottom: 1rem;
         box-sizing: border-box;
         text-align: center;
+        background-color: #fff;
+        box-sizing: content-box;
+        border-bottom: 8px solid var(--bg-primary);
+        border-radius: 0 0 1rem 1rem;
     }
 
 
@@ -31,13 +42,7 @@
 
 <div class="swiper-slide card_servicios">
     <img class="card_servicios_img" src={img}/>
-    <!--Botones Nro Imagenes-->
-    <!-- <section>
-        <button onclick="showNroImgSlide(1,1);">1</button>
-        <button onclick="showNroImgSlide(1,2);">2</button>
-        <button onclick="showNroImgSlide(1,3);">3</button>
-        <button onclick="showNroImgSlide(1,4);">4</button>
-    </section> -->
+
     <div class="card_servicios_information">
         <h4 class="card-servicios_title">{title}</h4>
         <a href={"/servicios/"+id} class="card-servicios_button" >ver más</a>
@@ -45,15 +50,4 @@
     </div>
     
 
-    <!-- <p>
-      Realizamos servicios de termoencogibles mediante etiquetas, fundas, precintos y bandas de seguridad.
-      Utilizamos materiales como poliolefina, polietileno y PVC de la más alta calidad con la finalidad de garantizar
-      la mejor presentación para sus productos de exhibición.
-
-        <ul>
-            <li>Excelente barrera a la humedad.</li>
-            <li>Posicionamiento de marca.</li>
-            <li>Aplicable en túnel o manual.</li>
-        </ul>
-    </p> -->
 </div>

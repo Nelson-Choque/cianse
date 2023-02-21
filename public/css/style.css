@@ -20,6 +20,11 @@
     font-style: normal;
 }
 
+:root{
+    --bg-primary: #23344f;
+    --color-primary: #23344f;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -146,7 +151,7 @@ button{
     padding: 4%;
     border-radius: 20px;
     margin-bottom: 7%;
-    border-bottom: 9px solid #2c148b;
+    border-bottom: 9px solid var(--bg-primary);
     transition: transform .5s ease;
 
   }
@@ -169,19 +174,6 @@ button{
     font-size: 15px;
 }
 
-/*Estilos Servicios*/
-
-/*.box-servicios{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    background: #F1F0F0;
-    overflow: hidden;
-    position: relative;
-    flex-wrap: wrap;
-}*/
-
 .box-servicios{
     padding-left: 10%;
     padding-right: 10%;
@@ -192,15 +184,6 @@ button{
     position: relative;
 }
 
-/*.box-servicios>h2{
-    font-size: 32px;
-    margin-bottom: 6%;
-    border-bottom:solid 7px #F70833;
-    width:5%;
-    height:5%;
-    border-radius:2px;
-    padding-bottom: 0.5%;
-}*/
 
 .box-servicios>h2{
     font-size: 32px;
@@ -229,7 +212,7 @@ button{
     transition: 0.5s all;
     margin-right: 40px;
     position:relative;
-    border-bottom: 9px solid #2c148b;
+    border-bottom: 9px solid var(--bg-primary);
 
 }
 
@@ -454,7 +437,7 @@ button{
     margin-bottom: 4%;
     margin-left: 3%;
     padding: 4px;
-    border-bottom: 6px solid #2c148b;
+    border-bottom: 6px solid var(--bg-primary);
 
   }
 
@@ -690,7 +673,7 @@ button{
 }
 
 .box-instalaciones>div>section>div>div{
-    width: 77px;
+    width: 100px;
     margin-top: 3%;
     text-align: center;
     box-shadow: 0 1px 13px #d7d7d7;
@@ -699,7 +682,7 @@ button{
     cursor: pointer;
     margin-bottom: 1%;
     background: #FFFF;
-    border-bottom: 5px solid #2c148b;
+    border-bottom: 5px solid var(--bg-primary);
 
 }
 
@@ -901,7 +884,7 @@ button{
     padding-top: 4%;
     padding-bottom: 4%;
     /*background: #f3f3f3;*/
-    background: #0C154A;
+    background: var(--bg-primary);
     display: flex;
     flex-direction: column
     ;
@@ -1446,6 +1429,15 @@ h1{
 
     font-size: 1.4rem;
     font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 
 }
 
@@ -1453,7 +1445,7 @@ h1{
 .card-servicios_button{
 
     padding: .5rem 2rem;
-    background-color: #0C154A;
+    background-color: var(--bg-primary);
 
     border: none;
     color: #fff;
@@ -1462,21 +1454,16 @@ h1{
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
+
+    align-self: center;
+
 }
 
 .title{
-    color: #0C154A;
+    color: var(--color-primary);
     font-size: 1.5rem !important;
 }
 
-@media(min-width:768px) {
-    .title{
-
-        font-size: 2rem !important;
-    }
-
-    
-}
 
 .contacto_information_location_map{
     margin-top: 1rem;
@@ -1491,3 +1478,21 @@ h1{
     font-family: 'Caviar-Dreams',sans-serif;
     font-weight: 500;
 }
+
+
+@media(min-width:768px) {
+    .title{
+
+        font-size: 2rem !important;
+    }
+
+    .font-text{
+        font-size: 1.2rem !important;
+        line-height: 26px;
+    }
+    
+}
+
+
+
+

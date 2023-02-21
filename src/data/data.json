@@ -5,7 +5,7 @@
       "nombre": "Trabajos refrigerados",
       "descripcion": "Contamos con ambientes que se mantienen bajo temperaturas reguladas, que permiten la manipulación de productos perecibles y/o sensibles a altas temperaturas. Esta área frigorífica asegura la conservación de las óptimas condiciones y calidad de sus productos. ",
 
-      "imagenes": ["termoencogibles.png"],
+      "imagenes": ["img-no-found.png"],
 
       "caracteristicas": [
         "Control de temperatura y humedad para mantener la calidad del producto.",
@@ -32,7 +32,7 @@
       "nombre": "Diseño y fabricación de exhibidores promocionales",
       "descripcion": "Desarrollamos exhibidores promocionales en cartón corrugado y micro corrugado que potencian el aspecto visual de sus productos y refuerzan la decisión de compra de su cliente. Contamos además con un equipo altamente especializado en diseño y CAD, herramientas que les permiten desarrollar prototipos de alto impacto frente a los productos o promociones de la competencia de su marca.",
 
-      "imagenes": ["termoencogibles.png"],
+      "imagenes": ["img-no-found.png"],
 
       "caracteristicas": [
         "Diseñado bajo los conceptos de los autoservicios, retail y consideraciones de góndolas donde se exhibirán sus productos.",
@@ -86,7 +86,7 @@
       "nombre": "Impresión de etiquetas adhesivas",
       "descripcion": "Realizamos el diseño e impresión de etiquetas adhesivas de papel con códigos de barra, QR, lotes, fechas de vencimiento y octógonos que permitan que sus productos cumplan con las normas que regulan la información que deben de contener los productos manufacturados que sean comercializados en el territorio nacional.",
 
-      "imagenes": ["termoencogibles.png"],
+      "imagenes": ["img-no-found.png"],
 
       "caracteristicas": [
         "Cumplimiento de normas técnicas.",
@@ -100,7 +100,7 @@
       "nombre": "Empaque blíster",
       "descripcion": "Ofrecemos empaques de calidad, que permiten exhibir su producto para que el consumidor conozca la presentación y características visuales y físicas, generando una mayor confianza en su decisión de compra. Adicionalmente, el empaque blister, muestra mayor protección del producto y facilita la decisión de elegirlo. ",
 
-      "imagenes": ["termoencogibles.png"],
+      "imagenes": ["img-no-found.png"],
 
       "caracteristicas": [
         "Fabricación de acuerdo a sus medidas y/o ficha técnica.",
@@ -114,7 +114,7 @@
       "nombre": "INKJET",
       "descripcion": "Contamos con equipos de última tecnología que permiten realizar impresión de textos, lotes, fechas de vencimiento, códigos QR y códigos de barra en cualquier tipo de superficie: regulares, irregulares, planas y curvas. Nuestras impresoras están preparadas para funcionar en líneas de producción en altas cantidades y tiempo reducido.",
 
-      "imagenes": ["img-service-inkjet-5.jpg","img-service-inkjet-1.jpg","img-service-inkjet-2.jpg","img-service-inkjet-3.jpg","img-service-inkjet-4.jpg"],
+      "imagenes": ["img-service-inkjet-5.jpg","img-service-inkjet-1.jpg","img-service-inkjet-3.jpg","img-service-inkjet-4.jpg"],
 
       "caracteristicas": [
         "Alta resolución 600 DPI.",
