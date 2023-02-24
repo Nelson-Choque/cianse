@@ -1,6 +1,6 @@
 <section class="header-banner">
     <nav>
-        <img src="/img/logo.png" />
+        <img style="cursor:pointer" onclick="moveHome()" src="/img/logo.png" />
         <img src="/img/menu-burguer.png" class="menu-mobile"/>
         <ul>
             <li><a href="/#nosotros">NOSOTROS</a></li>
@@ -29,3 +29,12 @@
     </script>
 
 </section>
+
+<script is:inline>
+    		function moveHome(){
+				let a = document.createElement("a")
+				a.setAttribute("href","/")
+				a.click();
+
+			}
+</script>
