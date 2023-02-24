@@ -562,7 +562,9 @@ import Contacto from "../components/contacto.astro";
 			}
 	
 			function moveContacto(){
-				$("a[href='#contacto']").click();
+				let a = document.createElement("a")
+				a.setAttribute("href","/#contacto")
+				a.click();
 			}
 	
 			// $(function(){
