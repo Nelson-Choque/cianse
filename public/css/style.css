@@ -124,10 +124,10 @@ button{
     flex-wrap: wrap;
 }
 
-.box-nosotros>h2{
+.nosotros_title{
     font-size: 32px;
     margin-right: 5%;
-    border-bottom:solid 7px #FE1C45;
+    border-bottom: 7px solid #FE1C45;
     width:5%;
     height:10%;
     border-radius:2px;
@@ -184,6 +184,7 @@ button{
     padding-right: 10%;
     padding-top: 4%;
     padding-bottom: -8%; */
+    padding-bottom: -8%;
     background: #f6f6f4;
     overflow: hidden;
     position: relative;
@@ -193,7 +194,7 @@ button{
 .box-servicios>h2{
     font-size: 32px;
     width:5%;
-    border-bottom:solid 7px #FE1C45;
+    border-bottom:7px solid #FE1C45;
     border-radius:2px;
 }
 
@@ -414,13 +415,16 @@ button{
 
 
 /*Equipo*/
+.section-equipo{
+    background: #f8fbf6;
+    
+}
 .box-equipo{
     padding: 1rem;
     /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 4%;
     padding-bottom: 4%; */
-    background: #f8fbf6;
 }
 
 .box-equipo>div{
@@ -521,13 +525,16 @@ button{
 
 
 /*Instalaciones*/
+.instalaciones{
+    background: #f9f9f9;
+
+}
 .box-instalaciones{
     padding: 1rem;
     /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 3%;
     padding-bottom: 10%; */
-    background: #f9f9f9;
 }
 
 .box-instalaciones>h2{
@@ -850,13 +857,18 @@ button{
 
 
 /*Clientes*/
+
+.section-clientes{
+    background: #f8fbf6;
+
+}
+
 .box-clientes{
     padding: 1rem;
     /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 4%;
     padding-bottom: 4%; */
-    background: #f8fbf6;
 
 }
 
@@ -1338,6 +1350,7 @@ h1{
     }
 
     .card-nosotros>div{
+        width: 300px ;
         width:100%;
         margin-bottom: 8%;
     }
