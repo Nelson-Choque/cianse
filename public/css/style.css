@@ -42,6 +42,9 @@ button{
 
 .header-banner{
     background: url("../img/imagen_portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
