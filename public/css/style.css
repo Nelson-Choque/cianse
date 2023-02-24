@@ -78,8 +78,10 @@ button{
 
 .header-banner>div{
     color: white;
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 1536px;
+    margin: auto;
+    padding-left: 1rem;
+    /* padding-right: 10%; */
     padding-bottom: 2%;
     margin-top: 13%;
 }
@@ -112,10 +114,9 @@ button{
 
 
 .box-nosotros{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    min-height: 80vh;
+    display: flex;
+    padding: 1rem;
     background: #fcfcf7;
     flex-wrap: wrap;
 }
@@ -141,6 +142,7 @@ button{
 .card-nosotros{
     display: flex;
     justify-content: space-around;
+    margin-top: 2rem;
 }
 
 .card-nosotros>div{
@@ -150,7 +152,6 @@ button{
     box-shadow: 0 2px 16px #E9E9E9;
     padding: 4%;
     border-radius: 20px;
-    margin-bottom: 7%;
     border-bottom: 9px solid var(--bg-primary);
     transition: transform .5s ease;
 
@@ -175,10 +176,11 @@ button{
 }
 
 .box-servicios{
-    padding-left: 10%;
+    padding: 1rem;
+    /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 4%;
-    padding-bottom: -8%;
+    padding-bottom: -8%; */
     background: #f6f6f4;
     overflow: hidden;
     position: relative;
@@ -410,10 +412,11 @@ button{
 
 /*Equipo*/
 .box-equipo{
-    padding-left: 10%;
+    padding: 1rem;
+    /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 4%;
-    padding-bottom: 4%;
+    padding-bottom: 4%; */
     background: #f8fbf6;
 }
 
@@ -516,10 +519,11 @@ button{
 
 /*Instalaciones*/
 .box-instalaciones{
-    padding-left: 10%;
+    padding: 1rem;
+    /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 3%;
-    padding-bottom: 10%;
+    padding-bottom: 10%; */
     background: #f9f9f9;
 }
 
@@ -844,10 +848,11 @@ button{
 
 /*Clientes*/
 .box-clientes{
-    padding-left: 10%;
+    padding: 1rem;
+    /* padding-left: 10%;
     padding-right: 10%;
     padding-top: 4%;
-    padding-bottom: 4%;
+    padding-bottom: 4%; */
     background: #f8fbf6;
 
 }
@@ -879,11 +884,6 @@ button{
 
 /*Clientes*/
 .box-contacto{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    /*background: #f3f3f3;*/
     background: var(--bg-primary);
     display: flex;
     flex-direction: column
@@ -901,13 +901,10 @@ button{
 }
 
 .box-contacto>div{
-    width: 60%;
     display: block;
     /*margin: auto;*/
     background-color: #e4e4e4;
     color: #000;
-    padding: 4%;
-    margin-top: 1rem;
     border-radius: 12px;
     box-shadow: 0 1px 10px #878787;
     font-weight: bold;
@@ -964,20 +961,15 @@ button{
 
 .box-contacto>div>form>div>input{
     width: 80%;
-    padding: 2%;
     border-radius: 10px;
     border: 1px solid #d2d2d2;
-    margin-bottom: 4%;
-    font-family: 'Caviar-Dreams',sans-serif;
 }
 
 .box-contacto>div>form>div>textarea{
     width: 80%;
-    padding: 2%;
     border-radius: 10px;
     border: 1px solid #d2d2d2;
     height: 80px;
-    font-family: 'Caviar-Dreams',sans-serif;
 }
 
 .box-contacto>div>form>div>button{
@@ -1143,12 +1135,6 @@ h1{
     }
 
 
-    .box-contacto {
-        padding-left: 4%;
-        padding-right: 4%;
-
-
-    }
 
     .box-contacto>div {
         width: 100%;
@@ -1189,18 +1175,6 @@ h1{
         margin-bottom: 12%;
     }
 
-    .box-contacto>div>form>div>input {
-        width: 72%;
-        padding: 1%;
-        margin-left: 18px;
-
-    }
-
-    .box-contacto>div>form>div>textarea {
-        width: 72%;
-        padding: 2%;
-        margin-left: 18px;
-    }
 
     .box-clientes>section {
         flex-wrap: wrap;
@@ -1479,6 +1453,11 @@ h1{
     font-weight: 500;
 }
 
+.font-text-form{
+
+    font-family: sans-serif;
+    padding: 1rem 1.5rem;
+}
 
 @media(min-width:768px) {
     .title{
@@ -1493,6 +1472,21 @@ h1{
     
 }
 
+.box-clientes-section{
+
+    gap: 1rem !important;
+}
+
+.box-clientes-section-img{
+    width: 140px !important;
+    height: 140px !important;
+    margin: 0 !important;
+    object-fit: contain;
+}
 
 
+.container{
+    max-width: 1536px;
+    margin: auto;
 
+  }

@@ -19,10 +19,6 @@ export function getStaticPaths() {
         { params: { id: "9" } },
         { params: { id: "10" } },
         { params: { id: "11" } },
-        { params: { id: "12" } },
-        { params: { id: "13" } },
-        { params: { id: "14" } },
-        { params: { id: "15" } },
     ];
 }
 
@@ -102,7 +98,6 @@ let service = servicios.find((service) => service.id === idParams);
 
     }
     .producto_descripcion_text{
-        line-height: 30px;
     }
 
     .producto_descripcion_button{
@@ -135,7 +130,7 @@ let service = servicios.find((service) => service.id === idParams);
         list-style: none;
     }
     .producto_caracteristicas_items_item {
-        line-height: 30px;
+        margin-top: .5rem;
     }
 
     .producto_caracteristicas_items_item_icon{

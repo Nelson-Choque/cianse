@@ -1,25 +1,12 @@
 {
   "servicios": [
-    {
-      "id": 1,
-      "nombre": "Trabajos refrigerados",
-      "descripcion": "Contamos con ambientes que se mantienen bajo temperaturas reguladas, que permiten la manipulación de productos perecibles y/o sensibles a altas temperaturas. Esta área frigorífica asegura la conservación de las óptimas condiciones y calidad de sus productos. ",
-
-      "imagenes": ["img-no-found.png"],
-
-      "caracteristicas": [
-        "Control de temperatura y humedad para mantener la calidad del producto.",
-        "Inhibir la proliferación de microorganismos patógenos peligrosos para la salud."
-      ]
-    },
 
     {
-      "id": 2,
+      "id":1,
       "nombre": "Acondicionado y reacondicionado",
       "descripcion": "Realizamos el acondicionamiento de sus productos en todo tipo de empaques o exhibidores promocionales.  Asimismo, reacondicionamos sus productos para optimizar la  presentación de sus empaques con la finalidad de generar un mayor impacto y reforzar la intención de compra en el punto de venta.",
 
-      "imagenes": ["img-service-acondicionamiento-1.jpg","img-service-acondicionamiento-2.jpg"],
-
+      "imagenes": ["img-service-acondicionamiento-1.jpg","img-service-acondicionamiento-2.jpg","img-service-acondicionamiento-3.jpeg","img-service-acondicionamiento-4.jpeg","img-service-acondicionamiento-5.JPG"],
       "caracteristicas": [
         "Generar nuevas experiencias de compra.",
         "Facilita el acercamiento del consumidor.",
@@ -28,25 +15,23 @@
     },
 
     {
-      "id": 3,
-      "nombre": "Diseño y fabricación de exhibidores promocionales",
-      "descripcion": "Desarrollamos exhibidores promocionales en cartón corrugado y micro corrugado que potencian el aspecto visual de sus productos y refuerzan la decisión de compra de su cliente. Contamos además con un equipo altamente especializado en diseño y CAD, herramientas que les permiten desarrollar prototipos de alto impacto frente a los productos o promociones de la competencia de su marca.",
+      "id": 2,
+      "nombre": "Almacenaje",
+      "descripcion": "Contamos con instalaciones  adecuadas  para  almacenar su mercadería, asegurando su custodia segura y correcta manipulación y control mediante el uso de sistemas de seguridad, maquinaria y equipos.",
 
-      "imagenes": ["img-no-found.png"],
+      "imagenes": ["img-service-almacenaje-1.jpg","img-service-almacenaje-2.jpeg","img-service-almacenaje-3.jpeg","img-service-almacenaje-4.jpeg","img-service-almacenaje-5.jpeg"],
 
       "caracteristicas": [
-        "Diseñado bajo los conceptos de los autoservicios, retail y consideraciones de góndolas donde se exhibirán sus productos.",
-        "Empaques amigables con el medio ambiente.",
-        "Diferenciación frente a la competencia."
+        "Amplia capacidad de almacenaje.",
+        "Mercadería asegurada mediante pólizas de seguro."
       ]
     },
-
     {
-      "id": 4,
+      "id": 3,
       "nombre": "Encintado y/o emplayado",
       "descripcion": "Realizamos encintados de cajas bajo altos estándares de calidad, para la protección de sus productos durante el proceso de almacenaje o transporte.  Asimismo, emplayamos; en películas de plástico, las cajas trabajadas según la necesidad de distribución y logística que su empresa requiera.",
 
-      "imagenes": ["img-service-encintado-1.jpg","img-service-encintado-2.jpg"],
+      "imagenes": ["img-service-encintado-1.jpg","img-service-encintado-2.jpeg","img-service-encintado-3.jpeg","img-service-encintado-4.jpeg","img-service-encintado-5.jpeg"],
 
       "caracteristicas": [
         "Protección de los empaques promocionales",
@@ -55,66 +40,42 @@
     },
 
     {
-      "id": 5,
-      "nombre": "Almacenaje",
-      "descripcion": "Contamos con instalaciones  adecuadas  para  almacenar su mercadería, asegurando su custodia segura y correcta manipulación y control mediante el uso de sistemas de seguridad, maquinaria y equipos.",
+      "id": 4,
+      "nombre": "ARMADO DE PROMOCIONES",
+      "descripcion": "Colaboramos con nuestros clientes en la planificación y desarrollo de sus empaques promocionales y/o de mercadeo para su posterior armado y embalaje. Nuestro compromiso es una entrega oportuna de acuerdo a los requerimientos establecidos por nuestros clientes.",
 
-      "imagenes": ["img-service-almacenaje-1.jpg"],
+      "imagenes": ["img-service-armado-promociones-1.jpg","img-service-armado-promociones-2.JPG","img-service-armado-promociones-4.JPG","img-service-armado-promociones-5.JPG","img-service-armado-promociones-3.jpg"],
 
       "caracteristicas": [
-        "Amplia capacidad de almacenaje.",
-        "Mercadería asegurada mediante pólizas de seguro."
+        "Fabricación y diseño de packaging.",
+        "Prototipos en 3D.",
+        "Mano de obra calificada."
       ]
     },
+
+
+    {
+      "id": 5,
+      "nombre": "ETIQUETADO Y MARBETEO",
+      "descripcion": "A través de este proceso empleamos el pegado de etiquetas auto-adheribles que pueden sustituir, tapar o identificar nueva información sobre un producto. Nuestros equipos de alta gama nos permiten impresiones de etiquetas autoadhesivas en alta calidad para obtener la mejor presentación de su producto.",
+
+      "imagenes": ["img-service-etiquetado-1.jpeg","img-service-etiquetado-2.jpeg","img-service-etiquetado-3.jpeg","img-service-etiquetado-4.jpeg","img-service-etiquetado-5.jpeg"],
+
+      "caracteristicas": [
+        "Etiquetas para Código de barras.",
+        "Etiquetas de contenido, piezas, peso, cantidad.",
+        "Etiquetas promocionales, 2 x 1, 20% desc, etc.",
+        "Etiquetas de reemplazo, textos legales, nutrimentales."
+      ]
+    },
+
 
     {
       "id": 6,
-      "nombre": "Diseño y desarrollo de caja master",
-      "descripcion": "Diseñamos y desarrollamos cajas máster de cartón corrugado y microcorrugado a full color o fotocromía con impresión Offset. Estas cajas son comúnmente utilizadas para el correcto agrupamiento de unidades, embalaje y protección de productos como: alimentos, golosinas, bebidas, artefactos eléctricos, productos cosméticos, entre otros.",
-
-      "imagenes": ["img-service-caja-master-1.jpg"],
-
-      "caracteristicas": [
-        "Fabricación de acuerdo a sus medidas y/o ficha técnica.",
-        "Impresión Offset a full color.",
-        "Protección de productos durante los procesos logísticos."
-      ]
-    },
-
-    {
-      "id": 7,
-      "nombre": "Impresión de etiquetas adhesivas",
-      "descripcion": "Realizamos el diseño e impresión de etiquetas adhesivas de papel con códigos de barra, QR, lotes, fechas de vencimiento y octógonos que permitan que sus productos cumplan con las normas que regulan la información que deben de contener los productos manufacturados que sean comercializados en el territorio nacional.",
-
-      "imagenes": ["img-no-found.png"],
-
-      "caracteristicas": [
-        "Cumplimiento de normas técnicas.",
-        "Cumplimiento de estándares de calidad.",
-        "Claridad y legibilidad para la identificación de sus productos."
-      ]
-    },
-
-    {
-      "id": 8,
-      "nombre": "Empaque blíster",
-      "descripcion": "Ofrecemos empaques de calidad, que permiten exhibir su producto para que el consumidor conozca la presentación y características visuales y físicas, generando una mayor confianza en su decisión de compra. Adicionalmente, el empaque blister, muestra mayor protección del producto y facilita la decisión de elegirlo. ",
-
-      "imagenes": ["img-no-found.png"],
-
-      "caracteristicas": [
-        "Fabricación de acuerdo a sus medidas y/o ficha técnica.",
-        "Impresión Offset a full color.",
-        "Protección de productos durante los procesos logísticos."
-      ]
-    },
-
-    {
-      "id": 9,
       "nombre": "INKJET",
       "descripcion": "Contamos con equipos de última tecnología que permiten realizar impresión de textos, lotes, fechas de vencimiento, códigos QR y códigos de barra en cualquier tipo de superficie: regulares, irregulares, planas y curvas. Nuestras impresoras están preparadas para funcionar en líneas de producción en altas cantidades y tiempo reducido.",
 
-      "imagenes": ["img-service-inkjet-5.jpg","img-service-inkjet-1.jpg","img-service-inkjet-3.jpg","img-service-inkjet-4.jpg"],
+      "imagenes": ["img-service-inkjet-5.jpg","img-service-inkjet-1.jpg","img-service-inkjet-2.jpeg","img-service-inkjet-3.jpeg","img-service-inkjet-4.jpeg"],
 
       "caracteristicas": [
         "Alta resolución 600 DPI.",
@@ -124,11 +85,26 @@
     },
 
     {
-      "id": 10,
+      "id": 7,
+      "nombre": "REVISIÓN DE CALIDAD",
+      "descripcion": "Servicio enfocado a la revisión física al empaque primario y secundario del producto de acuerdo a los requerimientos del cliente, mercado o normativa. Garantizamos que cada unidad se presente en el mercado en óptimas condiciones para su comercialización.",
+
+      "imagenes": ["img-service-revision-calidad-1.jpeg","img-service-revision-calidad-2.jpeg","img-service-revision-calidad-3.jpeg","img-service-revision-calidad-4.jpeg","img-service-revision-calidad-5.jpeg"],
+
+      "caracteristicas": [
+        "Verificación de empaques en su totalidad.",
+        "Lavado de ampollas y limpieza de empaque.",
+        "Trabajamos bajo estándar BPM o de acuerdo a los requerimientos del cliente."
+      ]
+    },
+
+    
+    {
+      "id": 8,
       "nombre": "SERVICIO IN HOUSE",
       "descripcion": "Desplazamos nuestro personal y equipos a la planta de nuestros clientes para administrar sus procesos de acondicionamiento o tercerización con manejo total o parcial de acuerdo a sus necesidades.",
 
-      "imagenes": ["img-service-in-house-1.jpg"],
+      "imagenes": ["img-service-in-house-1.jpeg","img-service-in-house-2.jpeg","img-service-in-house-3.jpeg","img-service-in-house-4.jpeg","img-service-in-house-5.jpeg"],
 
       "caracteristicas": [
         "Excelentes tiempos de respuesta a sus requerimientos.",
@@ -137,71 +113,54 @@
       ]
     },
 
+
+    {
+      "id": 9,
+      "nombre": "Diseño y desarrollo de caja master",
+      "descripcion": "Diseñamos y desarrollamos cajas máster de cartón corrugado y microcorrugado a full color o fotocromía con impresión Offset. Estas cajas son comúnmente utilizadas para el correcto agrupamiento de unidades, embalaje y protección de productos como: alimentos, golosinas, bebidas, artefactos eléctricos, productos cosméticos, entre otros.",
+
+      "imagenes": ["img-service-caja-master-1.jpeg","img-service-caja-master-2.jpeg","img-service-caja-master-3.jpeg","img-service-caja-master-4.jpeg","img-service-caja-master-5.jpeg"],
+
+      "caracteristicas": [
+        "Fabricación de acuerdo a sus medidas y/o ficha técnica.",
+        "Impresión Offset a full color.",
+        "Protección de productos durante los procesos logísticos."
+      ]
+    },
+
+
+    
+    {
+      "id": 10,
+      "nombre": "Diseño y fabricación de exhibidores promocionales",
+      "descripcion": "Desarrollamos exhibidores promocionales en cartón corrugado y micro corrugado que potencian el aspecto visual de sus productos y refuerzan la decisión de compra de su cliente. Contamos además con un equipo altamente especializado en diseño y CAD, herramientas que les permiten desarrollar prototipos de alto impacto frente a los productos o promociones de la competencia de su marca.",
+
+      "imagenes": ["img-service-exhibidores-promocionales-1.jpeg","img-service-exhibidores-promocionales-2.jpeg","img-service-exhibidores-promocionales-3.jpeg","img-service-exhibidores-promocionales-4.jpeg","img-service-exhibidores-promocionales-5.jpeg"],
+
+      "caracteristicas": [
+        "Diseñado bajo los conceptos de los autoservicios, retail y consideraciones de góndolas donde se exhibirán sus productos.",
+        "Empaques amigables con el medio ambiente.",
+        "Diferenciación frente a la competencia."
+      ]
+    },
+
+
     {
       "id": 11,
-      "nombre": "ETIQUETADO Y MARBETEO",
-      "descripcion": "A través de este proceso empleamos el pegado de etiquetas auto-adheribles que pueden sustituir, tapar o identificar nueva información sobre un producto. Nuestros equipos de alta gama nos permiten impresiones de etiquetas autoadhesivas en alta calidad para obtener la mejor presentación de su producto.",
+      "nombre": "Trabajos refrigerados",
+      "descripcion": "Contamos con ambientes que se mantienen bajo temperaturas reguladas, que permiten la manipulación de productos perecibles y/o sensibles a altas temperaturas. Esta área frigorífica asegura la conservación de las óptimas condiciones y calidad de sus productos. ",
 
-      "imagenes": ["img-service-etiquetado-1.jpg","img-service-etiquetado-2.jpg","img-service-etiquetado-3.jpg","img-service-etiquetado-4.jpg"],
-
-      "caracteristicas": [
-        "Etiquetas para Código de barras.",
-        "Etiquetas de contenido, piezas, peso, cantidad.",
-        "Etiquetas promocionales, 2 x 1, 20% desc, etc.",
-        "Etiquetas de reemplazo, textos legales, nutrimentales."
-      ]
-    },
-    {
-      "id": 12,
-      "nombre": "ARMADO DE PROMOCIONES",
-      "descripcion": "Colaboramos con nuestros clientes en la planificación y desarrollo de sus empaques promocionales y/o de mercadeo para su posterior armado y embalaje. Nuestro compromiso es una entrega oportuna de acuerdo a los requerimientos establecidos por nuestros clientes.",
-
-      "imagenes": ["img-service-armado-promociones-1.jpg","img-service-armado-promociones-2.jpg","img-service-armado-promociones-3.jpg"],
+      "imagenes": ["img-service-trabajos-refrigerados-5.PNG","img-service-trabajos-refrigerados-1.jpeg","img-service-trabajos-refrigerados-2.jpeg","img-service-trabajos-refrigerados-3.jpeg","img-service-trabajos-refrigerados-4.jpeg"],
 
       "caracteristicas": [
-        "Fabricación y diseño de packaging.",
-        "Prototipos en 3D.",
-        "Mano de obra calificada."
+        "Control de temperatura y humedad para mantener la calidad del producto.",
+        "Inhibir la proliferación de microorganismos patógenos peligrosos para la salud."
       ]
-    },
-    {
-      "id": 13,
-      "nombre": "REVISIÓN DE CALIDAD",
-      "descripcion": "Servicio enfocado a la revisión física al empaque primario y secundario del producto de acuerdo a los requerimientos del cliente, mercado o normativa. Garantizamos que cada unidad se presente en el mercado en óptimas condiciones para su comercialización.",
+    }
 
-      "imagenes": ["img-service-revision-calidad-1.jpg","img-service-revision-calidad-2.jpg"],
 
-      "caracteristicas": [
-        "Verificación de empaques en su totalidad.",
-        "Lavado de ampollas y limpieza de empaque.",
-        "Trabajamos bajo estándar BPM o de acuerdo a los requerimientos del cliente."
-      ]
-    },
-    {
-        "id": 14,
-        "nombre": "ARMADO DE CANASTAS",
-        "descripcion": "Elaboramos, diseñamos y colaboramos con nuestros clientes en la presentación de sus canastas. Contamos con personal calificado en BPM para los servicios de armado de canastas que realizamos de manera manual; nuestro equipo tiene la experiencia y habilidad para proporcionar un óptimo rendimiento en los procesos requeridos.",
-  
-        "imagenes": ["img-service-armado-canastas-1.jpg","img-service-armado-canastas-2.jpg"],
-  
-        "caracteristicas": [
-          "Fabricación y diseño de cajas.",
-          "Mano de obra calificada."
-        ]
-      },
-      {
-        "id": 15,
-        "nombre": "TERMOENCOGIBLE Y TERMOCONTRAIBLE",
-        "descripcion": "Realizamos servicios de termoencogible y termocontraible mediante etiquetas, fundas, precintos y bandas de seguridad. Utilizamos materiales como poliolefina, polietileno y PVC de la más alta calidad con la finalidad de garantizar la mejor presentación para sus productos de exhibición.",
-  
-        "imagenes": ["img-service-termoencogibles-1.png"],
-  
-        "caracteristicas": [
-          "Presentación atractiva",
-          "Posicionamiento de marca.",
-          "Excelente barrera a la humedad."
-        ]
-      }
 
   ]
 }
+
+
