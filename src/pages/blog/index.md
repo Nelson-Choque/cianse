@@ -1,6 +1,5 @@
 ---
 
-    import
 
     title: 'mi title'
 
