@@ -139,7 +139,9 @@ let service = servicios.find((service) => service.id === idParams);
         color: green;
         font-size: 1.5rem;
     }
-
+    .producto_caracteristicas_items_item_text{
+        margin: 0;
+    }
 
     @media (min-width: 768px) {
         .producto {
@@ -227,7 +229,7 @@ let service = servicios.find((service) => service.id === idParams);
                         (service.caracteristicas)?
                             service.caracteristicas.map((e) => (
                                 <li class="producto_caracteristicas_items_item">
-                                    <i class="fa-regular fa-circle-check producto_caracteristicas_items_item_icon"></i> {e}
+                                    <i class="fa-regular fa-circle-check producto_caracteristicas_items_item_icon"></i> <p class="producto_caracteristicas_items_item_text">{e}</p>
                                     </li>
                                     )):"error"
     
