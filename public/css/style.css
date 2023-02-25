@@ -1527,17 +1527,38 @@ h1{
 }
 
 
+*/
 
 @media (min-width:768px) {
 
-    .container{
-        
-        max-width: 720px;
+
+    .box-nosotros{
+        margin-top: 4rem !important;
+    }
+    .box-servicios{
+        margin-top: 4rem !important;
+
     }
 
+    .instalaciones{
+        margin-top: 4rem !important;
+
+    }
+    .section-equipo{
+        margin-top: 4rem !important;
+
+    }
+    .section-clientes{
+        margin-top: 4rem !important;
+
+    }
+    .contact-location{
+        margin-top: 4rem !important;
+
+    }
     
 }
- */
+
 
 @media (min-width:992px) {
 
