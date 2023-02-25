@@ -890,7 +890,6 @@ button{
 .box-clientes>section{
     display: flex;
     justify-content: space-evenly;
-    padding: 1.5rem 0;
     flex-wrap: wrap;
 
 }
@@ -1204,7 +1203,6 @@ h1{
 
     .box-clientes>h2 {
         text-align: center;
-        margin-bottom: 16%;
     }
 
     .box-porque-nosotros>h2 {
