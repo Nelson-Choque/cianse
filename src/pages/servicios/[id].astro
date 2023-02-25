@@ -110,7 +110,11 @@ let service = servicios.find((service) => service.id === idParams);
         font-weight: bold;
         text-transform: uppercase;
     }
+    .producto_descripcion_button:hover{
 
+        background-color: var(--bg-primary--hover);
+
+    }
     .producto_caracteristicas {
         /* border: 1px solid #000000aa; */
         grid-area: caracteristicas;
@@ -145,7 +149,7 @@ let service = servicios.find((service) => service.id === idParams);
         margin: 0;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         .producto {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: max-content max-content;
@@ -181,20 +185,15 @@ let service = servicios.find((service) => service.id === idParams);
     }
 
     }
-    @media (min-width: 1200px) {
-        .producto {
-            max-width: 1400px;
-        }
 
-    }
 
 
 </style>
 
-<MySiteLayout>
+<MySiteLayout title={service.nombre} descripcion={service.descripcion} keywords={service.nombre} >
     <Header />
 
-    <section class="producto">
+    <section class="producto container">
 
         <div class="producto_images">
 
@@ -238,7 +237,7 @@ let service = servicios.find((service) => service.id === idParams);
                     }
                 </ul>
             </div>
-            <button class="producto_descripcion_button">¡CONTÁCTANOS!</button>
+            <button class="producto_descripcion_button" onclick="redirectContact()" >¡CONTÁCTANOS!</button>
 
 
         </div>
@@ -248,7 +247,7 @@ let service = servicios.find((service) => service.id === idParams);
 </MySiteLayout>
 
 
-<script type="module">
+<script is:inline>
 
 
         const $imgSecundarias = document.querySelector(".producto_images_secundarias");
@@ -272,5 +271,11 @@ let service = servicios.find((service) => service.id === idParams);
 
 
         })
+        function redirectContact(){
+            
+            const $a = document.createElement("a")
+            $a.setAttribute("href","https://wa.me/51995713485?text=Hola%21+Estoy+interesado+en+sus+servicios.")
+            $a.click();
+        }
 
   </script>
