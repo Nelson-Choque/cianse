@@ -28,6 +28,8 @@
     --bg-secundary--hover: #c43c45;
     
     --color-primary: #23344f;
+    --margin-top-section: 5rem !important;
+
 }
 
 html{
@@ -1418,7 +1420,7 @@ h1{
 
 .card-servicios_title{
 
-    font-size: 1.4rem;
+    font-size: 1.var(--margin-top-section) ;
     font-weight: bold;
     text-transform: uppercase;
     margin: 1rem 0;
@@ -1532,28 +1534,30 @@ h1{
 @media (min-width:768px) {
 
 
+    
+
     .box-nosotros{
-        margin-top: 4rem !important;
+        margin-top: var(--margin-top-section) !important;
     }
     .box-servicios{
-        margin-top: 4rem !important;
+        margin-top: var(--margin-top-section)  !important;
 
     }
 
     .instalaciones{
-        margin-top: 4rem !important;
+        margin-top: var(--margin-top-section)  !important;
 
     }
     .section-equipo{
-        margin-top: 4rem !important;
+        margin-top: var(--margin-top-section)  !important;
 
     }
     .section-clientes{
-        margin-top: 4rem !important;
+        margin-top: var(--margin-top-section)  !important;
 
     }
     .contact-location{
-        margin-top: 4rem !important;
+        margin-top: var(--margin-top-section)  !important;
 
     }
     
