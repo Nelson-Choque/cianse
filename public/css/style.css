@@ -36,9 +36,15 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
+*{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
     font-family: 'Nudista',sans-serif;
     overflow-x: hidden;
 }
@@ -157,7 +163,7 @@ button{
 
 .card-nosotros>div{
     background: #fFFF;
-    width: 23%;
+    width: 32%;
     text-align: center;
     box-shadow: 0 2px 16px #E9E9E9;
     padding: 4%;
@@ -453,7 +459,7 @@ button{
     border-radius: 16px;
     margin-bottom: 4%;
     margin-left: 3%;
-    padding: 4px;
+    padding: 1rem;
     border-bottom: 6px solid var(--bg-primary);
 
   }
@@ -609,7 +615,7 @@ button{
     color: white;
     background: #f5313d;
     font-size: 16px;
-    padding: 10px;
+    padding: .8rem 1rem;
     border: none;
     border-radius: 16px;
     margin-bottom: 6%;
@@ -622,7 +628,7 @@ button{
     color: white;
     background: #f5313d;
     font-size: 16px;
-    padding: 10px;
+    padding: .8rem 1rem;
     border: none;
     border-radius: 16px;
     margin-top:3%;
@@ -682,6 +688,7 @@ button{
     font-family: 'Caviar-Dreams',sans-serif;
     margin-right: 2%;
     text-align: start;
+    margin-top: 1rem;
 }
 
 .box-instalaciones>div>section>div{
@@ -720,7 +727,7 @@ button{
     color: #131313;
     margin-left: 10%;
     margin-right: 10%;
-    font-size: 12.5px;
+    font-size: 14px;
     font-style: Lighter;
     margin-bottom: 35%;
 }
@@ -996,7 +1003,7 @@ button{
     color: white;
     background: #f5313d;
     font-size: 16px;
-    padding: 1rem 1.5rem;
+    padding: .8rem 1rem;
     border: none;
     border-radius: 16px;
     margin: 1rem auto;
@@ -1420,7 +1427,7 @@ h1{
 
 .card-servicios_title{
 
-    font-size: 1.var(--margin-top-section) ;
+    font-size: 1.5rem ;
     font-weight: bold;
     text-transform: uppercase;
     margin: 1rem 0;
@@ -1437,7 +1444,7 @@ h1{
 
 .card-servicios_button{
 
-    padding: .5rem 2rem;
+    padding: .8rem 2rem;
     background-color: var(--bg-primary);
 
     border: none;
@@ -1540,26 +1547,22 @@ h1{
         margin-top: var(--margin-top-section) !important;
     }
     .box-servicios{
-        margin-top: var(--margin-top-section)  !important;
+        padding-top: var(--margin-top-section)  !important;
 
     }
 
     .instalaciones{
-        margin-top: var(--margin-top-section)  !important;
+        padding-top: var(--margin-top-section)  !important;
 
     }
     .section-equipo{
-        margin-top: var(--margin-top-section)  !important;
+        padding-top: var(--margin-top-section)  !important;
 
     }
     .section-clientes{
-        margin-top: var(--margin-top-section)  !important;
-
+        padding: 5rem 0 !important;
     }
-    .contact-location{
-        margin-top: var(--margin-top-section)  !important;
 
-    }
     
 }
 

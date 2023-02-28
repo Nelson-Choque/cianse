@@ -1,0 +1,291 @@
+
+@import 'variables';
+
+.header{
+
+    &_nav{
+        width: 100%;
+
+        background-color: transparent;
+        
+        position: fixed;
+
+        z-index: 20;
+
+        transition: .3s background-color ease;
+
+        &--active{
+
+            background-color: $bg-primary;
+
+        }
+        
+    }
+}
+
+.nav{
+
+    $height-header: 60px;
+
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: $height-header;
+    
+    position: relative;
+
+
+    @media (min-width:992px) {
+
+        $height-header: 70px;
+        height: $height-header;
+        
+    }
+
+    &_logo{
+
+        height: calc($height-header - 10px);
+
+        display: flex;
+        align-items: center;
+
+        @media (min-width:992px) {
+            height: $height-header;
+            
+        }
+
+        &_img{
+
+            height: 70%;
+        }
+
+
+    }
+
+    &_boton-mobile{
+        color: $text-color-white;
+        @media (min-width:992px) {
+
+            display: none;
+            
+        }
+    }
+
+    &_menu{
+        
+        padding: .5rem 0 .5rem 0 ;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+
+        list-style: none;
+
+        opacity: 0;
+        visibility: hidden;
+        background-color: transparent;
+
+        transition: .3s opacity ease,.3s background-color ease, .3s visibility ease;
+
+        &--active{
+            visibility: visible;
+            background-color: $bg-primary;
+
+            opacity: 1;
+        }
+
+        &_item{
+
+            
+
+            &_link{
+
+                display: inline-block;
+                padding: .8rem 1rem;
+
+                color: $text-color-white;
+                text-decoration: none;
+                font-weight: 500;
+
+                &:hover{
+                    background-color: $bg-secundary--hover;
+                    border-radius: 1rem;
+
+                }
+            }
+    
+        }
+
+        @media (min-width:992px) {
+
+            flex-direction: row;
+            position: static;
+            
+            visibility: visible;
+
+            opacity: 1;
+            width: max-content;
+
+            
+        }
+            
+
+    }
+}
+
+
+.portada{
+    
+    $height-portada: 90vh;
+    
+    display: flex;
+    flex-direction: column;
+
+    min-height: $height-portada;
+    
+    color: $text-color-white;
+    position: relative;
+    
+
+    background-color: #000;
+    &_information{
+
+        position: absolute;
+
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;        
+
+        text-align: start;
+
+        z-index: 10;
+
+
+
+        &_title{
+            font-size: 2rem;
+            font-weight: bold;
+            width: 100%;
+
+            @media (min-width:576px) {
+
+                font-size: 3rem;
+                
+            }
+            @media (min-width:992px) {
+
+                font-size: 4rem;
+                
+            }
+        }
+
+        &_text{
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 1rem;
+            @media (min-width:992px) {
+
+                font-size: 1.5rem;
+                
+            }
+        }
+
+        &_button{
+            display: inline-block;
+
+            padding: .8rem 1.5rem;
+
+            background-color: $bg-secundary;
+            
+            margin-top: 1rem;
+            color: $text-color-white;
+            border: none;
+            border-radius: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+
+            align-self: flex-start;
+        }
+    }
+
+    &_swiper{
+        width: 100%;
+        height: $height-portada;
+
+        &_wrapper{
+            width: 100%;
+            height: 100%;
+
+        }
+
+        &_slider{
+
+            height: 100%;
+           &_img{
+
+
+               opacity: .5; 
+               width: 100%;
+               height: $height-portada;
+               object-fit: cover;
+           }
+
+       }
+
+       &_pagination > *{
+        
+        background: $text-color-white;
+        
+       }
+       &_button{
+            display: none;
+            color: $text-color-white;
+            opacity: .5;
+            &:hover{
+                opacity: 1;
+            }
+
+            @media (min-width:992px) {
+
+                display: flex;
+
+                
+            }
+
+       }
+
+    }
+
+    // &_image{
+
+    //     width: 100%;
+    //     height: 100%;
+
+    //     &_img{
+    //         display: inline-block;
+    //         width: 100%;
+    //         height: 100%;
+
+    //     }
+    // }
+
+
+}

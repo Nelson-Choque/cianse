@@ -1,40 +1,234 @@
-<section class="header-banner">
-    <nav class="container">
-        <img style="cursor:pointer" onclick="moveHome()" src="/img/logo.png" />
-        <img src="/img/menu-burguer.png" class="menu-mobile"/>
-        <ul>
-            <li><a href="/#nosotros">NOSOTROS</a></li>
-            <li><a href="/#servicios">SERVICIOS</a></li>
-            <li><a href="/#equipo">EQUIPO</a></li>
-            <li><a href="/#contacto">CONTACTO</a></li>
+<header class="header">
+  <nav id="header_nav" class="header_nav">
+    <div class="container">
+      <div class="nav">
+        <div class="nav_logo">
+          <img class="nav_logo_img" onclick="moveHome()" src="/img/logo.png" />
+        </div>
+
+        <div id="nav_boton-mobile" class="nav_boton-mobile">
+          <i class="fa-solid fa-bars icon"></i>
+        </div>
+
+        <ul id="nav_menu" class="nav_menu">
+          <li class="nav_menu_item">
+            <a class="nav_menu_item_link" href="/#nosotros">NOSOTROS</a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="nav_menu_item_link" href="/#servicios">SERVICIOS</a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="nav_menu_item_link" href="/#equipo">EQUIPO</a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="nav_menu_item_link" href="/#contacto">CONTACTO</a>
+          </li>
         </ul>
-    </nav>
-    <div class="portada container" >
-
-        <h2>ESPECIALISTAS EN MAQUILA
-             DE EMPAQUES
-        </h2>
-        <p class="font-text">
-            Más de 17 años permitiendo que nuestros clientes se enfoquen en lo genera más valor
-            para su negocio, nosotros nos encargamos de lo demás.
-        </p>
-        <button onclick="moveContacto();">¡CONTÁCTANOS!</button>
-
+      </div>
     </div>
+  </nav>
 
-    <script is:inline>
-        $(".menu-mobile").click(function(){
-            $(".header-banner>nav>ul").toggle();
-        });
-    </script>
+  <section class="section_portada">
+    <div class="portada">
+      <div class="portada_information container">
+        <h2 class="portada_information_title">
+          ESPECIALISTAS EN MAQUILA DE EMPAQUES
+        </h2>
 
-</section>
+        <p class="portada_information_text">
+          Más de 17 años permitiendo que nuestros clientes se enfoquen en lo
+          genera más valor para su negocio, nosotros nos encargamos de lo demás.
+        </p>
+        <button class="portada_information_button" onclick="moveContacto();"
+          >¡CONTÁCTANOS!</button
+        >
+      </div>
 
-<script is:inline>
-    		function moveHome(){
-				let a = document.createElement("a")
-				a.setAttribute("href","/")
-				a.click();
+      <div class="swiper portada_swiper">
+        <div class="swiper-wrapper portada_swiper_wrapper">
+          <div class="swiper-slide portada_swiper_slider">
+            <img
+              class="portada_swiper_slider_img"
+              src="/img/img-portada-1.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide portada_wrapper_slider">
+            <img
+              class="portada_swiper_slider_img"
+              src="/img/img-portada-2.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide portada_wrapper_slider">
+            <img
+              class="portada_swiper_slider_img"
+              src="/img/img-portada-3.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide portada_wrapper_slider">
+            <img
+              class="portada_swiper_slider_img"
+              src="/img/img-portada-4.jpeg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="swiper-pagination portada_swiper_pagination"></div>
 
-			}
+        <div class="swiper-button-prev portada_swiper_button"></div>
+        <div class="swiper-button-next portada_swiper_button"></div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<!-- <section class="header-banner">
+  <nav class="container">
+    <img style="cursor:pointer" onclick="moveHome()" src="/img/logo.png" />
+    <img src="/img/menu-burguer.png" class="menu-mobile" />
+  </nav>
+  
+</section> -->
+
+<script type="module">
+
+  const swiper = new Swiper(".portada_swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+
+    autoplay: {
+      delay: 2000, // tiempo en milisegundos entre cada transición automática
+      disableOnInteraction: false, // para permitir que el usuario interactúe con el swiper mientras se reproduce automáticamente
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        // spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        // spaceBetween: 20,
+      },
+    },
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar
+  });
+
+  const $headerNav = document.getElementById("header_nav");
+  const $navBotonMobile = document.getElementById("nav_boton-mobile");
+  const $navMenu = document.getElementById("nav_menu");
+
+
+  const activarEventoScroll= ()=>{
+
+    if( !(location.pathname === "/") ){
+
+      document.removeEventListener("scroll",activarEventoScroll)
+      
+      console.log("eliminado")
+      $headerNav.classList.add("header_nav--active");
+
+      return "";
+
+
+    }
+
+    activarBackgroundNavbar();
+}
+
+
+  
+  document.addEventListener("DOMContentLoaded",()=>{
+    
+    activarEventoScroll();
+    
+  })
+    
+
+  document.addEventListener("scroll", activarEventoScroll);
+
+  $navBotonMobile.addEventListener("click", () => {
+
+
+    $headerNav.classList.add("header_nav--active");
+
+    desactivarMenu($navMenu);
+  });
+
+  $navMenu.addEventListener("click",(e)=>{
+
+    if( !(e.target.classList.contains("nav_menu_item_link") )){
+
+      return "";
+    }
+
+
+    desactivarMenu();
+  })
+
+
+
+  const activarBackgroundNavbar = () => {
+    if ( !(scrollY === 0)) {
+
+      $headerNav.classList.add("header_nav--active");
+      return "";
+    }
+
+    if($navMenu.classList.contains("nav_menu--active")){
+        
+      $headerNav.classList.add("header_nav--active");
+      return "";
+
+    }   
+
+
+    $headerNav.classList.remove("header_nav--active");
+
+  };
+
+  const desactivarMenu = (menu) => {
+
+    
+    if( !(window.innerWidth < 993) ){
+
+      return "";
+
+    }
+
+    $navMenu.classList.toggle("nav_menu--active");
+  };
+
+
+
 </script>
+
+<!-- <script is:inline>
+  $(".menu-mobile").click(function () {
+    $(".header-banner>nav>ul").toggle();
+  });
+
+  function moveHome() {
+    let a = document.createElement("a");
+    a.setAttribute("href", "/");
+    a.click();
+  }
+</script> -->

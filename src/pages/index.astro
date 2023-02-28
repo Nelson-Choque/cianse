@@ -8,7 +8,7 @@ import Instalaciones from "../components/instalaciones.astro";
 import Equipo from "../components/equipo.astro";
 import Clientes from "../components/clientes.astro";
 import Contacto from "../components/contacto.astro";
-
+import Main from '../components/Main.astro'
 
 ---
 
@@ -19,15 +19,11 @@ import Contacto from "../components/contacto.astro";
 
 		<Header />
 
-		<Nosotros />
-		
-		<Servicios />
+		<Main>
 
-		<Instalaciones/>
-		
-		<Equipo />
-		<Clientes />
-		<Contacto />
+
+		</Main>
+
 
 		<script is:inline>
 			var intervalImg;

@@ -1,0 +1,36 @@
+
+  
+@font-face {
+    font-family: 'Nudista';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Nudista'), url('/fonts/nudista.woff') format('woff');
+  }
+  
+  
+@font-face {
+    font-family: 'Caviar-Dreams';
+    src:url('/fonts/Futura-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+
+    scroll-padding-top: 60px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif, Arial;
+}
+
+@import 'utilities';  
+@import 'header';
+@import 'nosotros';

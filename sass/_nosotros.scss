@@ -1,0 +1,68 @@
+@import 'variables';
+
+
+.section-nosotros{
+    background-color: #fcfcf7;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.nosotros{
+
+    @media (min-width: 992px) {
+        padding-top: 4rem;
+
+    }
+
+    &_cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+        
+        margin-top: 2rem;
+        
+        @media (min-width: 576px) {
+            grid-template-columns: 1fr 1fr;
+
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+
+        &_item{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: #fff;
+
+            border-bottom: 9px solid $color-primary;
+            box-shadow: 0 2px 16px #e9e9e9;
+            text-align: center;
+
+            overflow: hidden;
+            transition: transform .5s ease ;
+
+            &:hover{
+                cursor: pointer;
+
+                transform: scale(1.07);
+                background-color: #E4EFFF;
+            }
+
+            &_img{
+                width: 40%;
+            }
+
+            &_text{
+                text-align: left;
+            }
+        }
+    }
+}

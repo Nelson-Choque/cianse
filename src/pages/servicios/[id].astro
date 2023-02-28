@@ -48,7 +48,7 @@ let service = servicios.find((service) => service.id === idParams);
         width: 100%;
         min-height:100vh ;
         margin: 0 auto 2rem auto;
-        padding: 1rem;
+        padding: 6rem 1rem 1rem 1rem;
         overflow: hidden;
         box-sizing: border-box;
         gap: 1rem;
@@ -90,6 +90,9 @@ let service = servicios.find((service) => service.id === idParams);
 
     .producto_descripcion {
         grid-area: descripcion;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
     .producto_descripcion_title {
         font-size: 1.5rem;
@@ -101,7 +104,7 @@ let service = servicios.find((service) => service.id === idParams);
     }
 
     .producto_descripcion_button{
-        padding: 1rem 1.5rem;
+        padding: .8rem 1rem;
         background-color: var(--bg-primary);
         color: #fff;
         border: none;
@@ -109,6 +112,7 @@ let service = servicios.find((service) => service.id === idParams);
         font-size: 1rem;
         font-weight: bold;
         text-transform: uppercase;
+        align-self: flex-start;
     }
     .producto_descripcion_button:hover{
 
@@ -118,7 +122,6 @@ let service = servicios.find((service) => service.id === idParams);
     .producto_caracteristicas {
         /* border: 1px solid #000000aa; */
         grid-area: caracteristicas;
-        margin-top: 1rem;
     }
 
     .producto_caracteristicas_title {
