@@ -14,14 +14,12 @@ html {
   scroll-padding-top: 60px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: sans-serif, Arial;
+}
+
+p {
+  line-height: 1.5rem !important;
 }
 
 .container {
@@ -265,6 +263,113 @@ body {
 }
 .nosotros_cards_item_text {
   text-align: left;
+}
+
+.main {
+  padding-top: 60px;
+  min-height: 100vh;
+}
+
+.notice {
+  font-family: "Caviar-Dreams", sans-serif;
+}
+.notice_banner {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3333333333), rgba(0, 0, 0, 0.3333333333)), url("/img/img-blog-portada.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: #fff;
+  font-family: "Nudista", sans-serif;
+}
+@media (min-width: 768px) {
+  .notice_banner {
+    font-size: 4rem;
+  }
+}
+.notice_card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3333333333);
+}
+.notice_card:hover .notice_card_date {
+  opacity: 1;
+}
+.notice_card_date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+  color: var(--bg-primary);
+  min-width: 80px;
+  transition: 0.3s opacity ease;
+  font-size: 1rem;
+}
+.notice_card_date_day {
+  font-weight: 500;
+}
+.notice_card_information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.notice_card_information_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-family: "Nudista", sans-serif;
+}
+.notice_card_information_title::first-letter {
+  text-transform: capitalize;
+}
+
+hr {
+  opacity: 0.6;
+}
+
+.container_blog {
+  max-width: 992px;
+}
+
+.blog {
+  padding: 80px 1rem;
+  min-height: 100vh;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-family: "Caviar-Dreams", sans-serif;
+}
+.blog_title {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .blog_title {
+    font-size: 3rem;
+  }
+}
+.blog img {
+  width: 100%;
+  margin: 1rem 0;
+}
+.blog p {
+  margin-top: 1rem;
+}
+.blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6 {
+  margin: 1rem 0;
+  line-height: 1.2em;
+  font-family: "Nudista", sans-serif;
+}
+.blog ul {
+  padding-left: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

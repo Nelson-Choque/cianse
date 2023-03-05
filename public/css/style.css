@@ -1037,7 +1037,6 @@ button{
 
 h1{
     width: 100%;
-    text-align: center;
 }
 
 .slide-2-service>section{
@@ -1104,11 +1103,11 @@ h1{
 @media(max-width:992px){
 
     p{
-        line-height:20px !important;
+        /* line-height:20px !important; */
     }
 
     h6{
-        line-height: 16px !important;
+        /* line-height: 16px !important; */
     }
 
     .box-porque-nosotros>section:nth-child(3)>img{

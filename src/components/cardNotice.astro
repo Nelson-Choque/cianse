@@ -1,0 +1,22 @@
+---
+
+const {url,fecha,title,description} = Astro.props;
+console.log(url)
+---
+
+<a href={url} class="notice_card">
+    <div class="notice_card_date">
+      <p class="notice_card_date_day">{fecha.day}</p>
+      <p class="notice_card_date_month">{fecha.month}</p>
+      <p class="notice_card_date_year">{fecha.year}</p>
+    </div>
+    <div class="notice_card_information">
+      <h2 class="notice_card_information_title">
+        {title}
+      </h2>
+
+      <p class="notice_card_information_description">
+        {description}
+      </p>
+    </div>
+</a>

@@ -1,7 +1,6 @@
 ---
 import Footer from "../components/footer.astro";
 
-import '../css/index.css'
 
 const {title,descripcion,keywords} = Astro.props;
 
@@ -26,6 +25,7 @@ const {title,descripcion,keywords} = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title || "Cianse - Especialistas en maquila de empaques"}</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="icon" href="/img/logocianse.ico" />
     
     <script is:inline src="/js/jquery.min.js"></script>

@@ -1,0 +1,75 @@
+---
+import CardNotice from "../../components/cardNotice.astro";
+import Header from "../../components/header.astro";
+import MySiteLayout from "../../layouts/MySiteLayout.astro";
+
+const posts = await Astro.glob('./posts/*.mdx');
+
+
+let noticeFecha;
+
+const fecha = (newfecha)=>{
+
+  const fechaReplace = newfecha.split("/").reverse().join().replace(/\,/g,"-");
+
+  const dateFecha = new Date(fechaReplace)
+
+  const fechaFormat = dateFecha.toLocaleDateString('es-ES',{ day: 'numeric', month: 'long', year: 'numeric',timeZone: 'UTC'});
+  
+  const fecha = fechaFormat.split("de");
+
+  return {
+    day: fecha[0],
+    month: fecha[1],
+    year: fecha[2]
+  }
+
+
+}
+
+
+---
+
+<style is:inline>
+    .portada{
+        display: none !important;
+    }  
+</style>
+
+<MySiteLayout>
+  <Header />
+
+  <main class="main">
+    <section class="notice">
+      <div class="notice_banner">
+        <div class="container">
+          <h2 class="notice_banner_title">
+            Noticias
+          </h2>
+        </div>
+      </div>
+
+      <div class="notice_body">
+        <div class="container">
+          {
+            (posts)?
+            posts.map((notice,index)=>{
+              return( 
+                <>
+                  <CardNotice url={notice.url} fecha={fecha(notice.frontmatter.fecha)} title={notice.frontmatter.title} description={notice.frontmatter.descripcion} />
+                </>
+              )
+            }):"error al cargar las noticias"
+          }
+          
+
+        </div>
+      </div>
+    </section>
+  </main>
+</MySiteLayout>
+
+<script is:inline>
+
+
+</script>
