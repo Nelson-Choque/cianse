@@ -14,7 +14,7 @@
           <img src="img/nuestro-equipo.jpg" />
         </section>
         <section>
-          <div>
+          <div onclick="moveBlog()">
             <div>
               <img src="img/img-icon-etica.png" />
             </div>
@@ -28,7 +28,7 @@
               </p>
             </div>
           </div>
-          <div>
+          <div onclick="moveBlog()">
             <div>
               <img src="img/img-icon-liderazgo.png" />
             </div>
@@ -42,7 +42,7 @@
               </p>
             </div>
           </div>
-          <div>
+          <div onclick="moveBlog()">
             <div>
               <img src="img/img-icon-diversidad.png" />
             </div>
@@ -61,3 +61,18 @@
     </section>
   </div>
 </section>
+
+<script is:inline>
+
+  const a = document.createElement("a");
+
+  a.setAttribute("href","/blog/");
+
+
+  function moveBlog(){
+    
+    a.click();
+
+  }
+
+</script>

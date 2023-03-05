@@ -275,7 +275,8 @@ p {
 }
 .notice_banner {
   width: 100%;
-  min-height: 50vh;
+  min-height: 300px;
+  height: 50vh;
   display: flex;
   align-items: center;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3333333333), rgba(0, 0, 0, 0.3333333333)), url("/img/img-blog-portada.jpg");
@@ -291,6 +292,10 @@ p {
     font-size: 4rem;
   }
 }
+.notice_body {
+  padding: 2rem 0;
+}
+
 .notice_card {
   display: flex;
   flex-direction: column;
@@ -300,6 +305,12 @@ p {
   text-decoration: none;
   color: #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3333333333);
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .notice_card {
+    flex-direction: row;
+  }
 }
 .notice_card:hover .notice_card_date {
   opacity: 1;
@@ -307,15 +318,24 @@ p {
 .notice_card_date {
   display: flex;
   align-items: center;
+  justify-content: start;
   gap: 0.5rem;
-  opacity: 0.5;
   color: var(--bg-primary);
   min-width: 80px;
   transition: 0.3s opacity ease;
-  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0.6;
 }
-.notice_card_date_day {
-  font-weight: 500;
+@media (min-width: 768px) {
+  .notice_card_date {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .notice_card_date_day {
+    font-size: 2.5rem;
+  }
 }
 .notice_card_information {
   display: flex;
