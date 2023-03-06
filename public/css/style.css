@@ -1248,6 +1248,7 @@ h1{
     .box-instalaciones>div>section>div {
         flex-wrap: wrap;
         column-gap: .5rem;    
+        margin-top: 1.5rem;
     }
 
     .box-instalaciones>div>section>div>div {
