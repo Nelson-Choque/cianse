@@ -1,120 +1,8 @@
 ---
 ---
 
-<style is:inline>
-  .contact-location{
 
-    background-color: var(--bg-primary);
-    padding: 2rem 0 2rem 0;
-  }
-
-
-  .section-contact-location {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .box-contacto {
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    justify-content: start;
-    padding: 1rem;
-  }
-
-  .contacto_title {
-    margin: 0;
-    color: #fff;
-  }
-
-  .contacto_container_form {
-    width: 100% !important;
-    padding: 1rem;
-    margin-top: 1.5rem;
-
-    box-sizing: border-box;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-
-  .contacto_form {
-    flex-wrap: wrap;
-    row-gap: 1rem;
-  }
-  .contacto_form_label {
-    width: 100% !important;
-  }
-  .contacto_form_input {
-    width: 100% !important;
-    margin: 0 !important;
-    /* padding: 1rem 1.5rem !important; */
-  }
-
-
-
-  .direction {
-    padding: 1rem;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    box-sizing: border-box;
-  }
-
-  .direction_title {
-    text-align: center;
-    color: #fff;
-    margin: 0;
-  }
-
-  .location {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-
-  .direction_item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .direction_item_map {
-    height: 160px;
-  }
-
-  @media (min-width: 800px) {
-    .contacto_information {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr;
-      width: 80% !important;
-    }
-  }
-  @media (min-width: 1200px) {
-    .section-contact-location {
-      flex-direction: row;
-    }
-
-    .box-contacto{
-      width: 50%;
-    }
-    .direction{
-      width: 50%;
-    }
-    .direction_item_map{
-      height: 200px;
-    }
-  }
-
-</style>
-<section class="contact-location">
-  <div class="container">
-    <section class="section-contact-location">
+<section class="contact-brand">
       <section id="contacto" class="box-contacto">
         <h3 class="title contacto_title">¡CONTÁCTANOS!</h3>
         <div class="contacto_container_form">
@@ -176,39 +64,23 @@
           </form>
         </div>
       </section>
+      
+      <section class="section_brand">
+        <div class="brand">
+        <div class="brand_logo">
+          <img class="brand_logo_img" src="/img/logocianse.png" alt="">
+          <h3 class="title brand_logo_title">CIANCE</h3>
+          <p class="brand_logo_description"> compañia nacional de servicios y empaques</p>
 
-      <section class="direction">
-        <h3 class="title direction_title">NUESTRAS UBICACIONES</h3>
-        <div class="direction_item font-text">
-          <p class="location">
-            Cal. El Amauta Mza. Q Lote 9 Urb. San Juan Bautista de Villa,
-            Chorrillos
-          </p>
-          <iframe
-            class="direction_item_map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.9135617971845!2d-77.00881984873214!3d-12.195571815884358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9dfc05ad5e5%3A0xd98f82d0e40f34af!2sCianse%20SAC!5e0!3m2!1ses-419!2spe!4v1676361125453!5m2!1ses-419!2spe"
-            width="100%"
-            height="80"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="direction_item font-text">
-          <p class="location">
-            Cal. 3 Mza. M Lote 6 - Km 20000 Las Vertientes, Villa el Salvador
-          </p>
-          <iframe
-            class="direction_item_map"
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3899.3668506686736!2d-76.96987928518567!3d-12.223421591349808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDEzJzI0LjMiUyA3NsKwNTgnMDMuNyJX!5e0!3m2!1ses!2spe!4v1676437236733!5m2!1ses!2spe"
-            width="100%"
-            height="80"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="brand_message">
+          <p class="brand_message_p1">¡Queremos ayudarte a hacer realidad tus proyectos!</p>
+          <p class="brand_message_p2">más de 20 años en el mercado y cientos de clientes satisfechos nos respaldan nuestro excelente trabajo</p>
+        </div>
+        <div class="brand_social-media">
+          <i class="fa-brands fa-linkedin brand_social-media_item"></i>
+          <i class="fa-brands fa-square-facebook brand_social-media_item"></i>        
+        </div>
         </div>
       </section>
-    </section>
-  </div>
 </section>

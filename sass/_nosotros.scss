@@ -57,7 +57,10 @@
             }
 
             &_img{
-                width: 40%;
+                width: 44%;
+                height: 88px;
+                object-fit: contain;
+                
             }
 
             &_text{

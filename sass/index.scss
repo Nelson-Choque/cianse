@@ -27,10 +27,11 @@ body{
 }
 
 p{
-    line-height: 1.5rem !important;
+    line-height: 1.2em !important;
 }
 
 @import 'utilities';  
 @import 'header';
 @import 'nosotros';
 @import 'blog';
+@import 'contacto';

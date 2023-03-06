@@ -45,7 +45,7 @@ html{
 
 body{
 
-    font-family: 'Nudista',sans-serif;
+    font-family: 'Nudista',sans-serif !important;
     overflow-x: hidden;
 }
 
@@ -910,7 +910,6 @@ button{
 
 /*Clientes*/
 .box-contacto{
-    background: var(--bg-primary);
     display: flex;
     flex-direction: column
     ;
@@ -929,10 +928,8 @@ button{
 .box-contacto>div{
     display: block;
     /*margin: auto;*/
-    background-color: #e4e4e4;
     color: #000;
     border-radius: 12px;
-    box-shadow: 0 1px 10px #878787;
     font-weight: bold;
 
 }
@@ -988,13 +985,11 @@ button{
 .box-contacto>div>form>div>input{
     width: 80%;
     border-radius: 10px;
-    border: 1px solid #d2d2d2;
 }
 
 .box-contacto>div>form>div>textarea{
     width: 80%;
     border-radius: 10px;
-    border: 1px solid #d2d2d2;
     height: 80px;
 }
 

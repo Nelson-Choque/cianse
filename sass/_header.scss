@@ -184,7 +184,7 @@
             font-size: 2rem;
             font-weight: bold;
             width: 100%;
-
+            font-family: $font-family-title;
             @media (min-width:576px) {
 
                 font-size: 3rem;
@@ -200,7 +200,8 @@
         &_text{
             width: 100%;
             margin-top: 1rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-family: $font-family-text;
             @media (min-width:992px) {
 
                 font-size: 1.5rem;
@@ -221,6 +222,8 @@
             border-radius: 1rem;
             font-size: 1rem;
             font-weight: bold;
+
+            font-family: $font-family-title;
 
             align-self: flex-start;
         }
