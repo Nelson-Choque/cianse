@@ -1102,7 +1102,7 @@ h1{
     }
 
     h6{
-        /* line-height: 16px !important; */
+        line-height:1.5em !important;
     }
 
     .box-porque-nosotros>section:nth-child(3)>img{
