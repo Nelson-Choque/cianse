@@ -2,50 +2,55 @@
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 
+const { frontmatter } = Astro.props;
+
+const title = frontmatter.title.toLowerCase();
+
+const description = frontmatter.descripcion.toLowerCase();
 ---
 
-
 <style is:inline>
-
-    .portada{
-        display: none !important;
-    }
-
+  .portada {
+    display: none !important;
+  }
 </style>
 
-
-<!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document2</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description}/>
 
-    <script src="https://kit.fontawesome.com/6134260e4d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/img/logocianse.ico" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6134260e4d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script is:inline src="/js/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/6134260e4d.js" crossorigin="anonymous"></script>
-</head>
-<body>
-
+    <script
+      src="https://kit.fontawesome.com/6134260e4d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <Header />
 
     <main class="blog">
-
-        <slot />
-
-
-
+      <slot />
     </main>
 
     <Footer />
-    
-    <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-
-</body>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+  </body>
 </html>
-
