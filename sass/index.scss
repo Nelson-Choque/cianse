@@ -24,12 +24,19 @@ html{
 
 body{
     font-family: sans-serif, Arial;
+    font-size: 1.1rem;
+
+    @media (min-width:768px) {
+
+        font-size: 1.2rem;
+        
+    }
 }
 
 p{
     line-height: 1.2em !important;
 }
-
+@import 'oldcss';
 @import 'utilities';  
 @import 'header';
 @import 'nosotros';
